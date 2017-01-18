@@ -41,6 +41,7 @@ public class Constant {
     public static final String ARC_TYPE_VRETURN = "VReturn";
     public static final String ARC_TYPE_MLPS = "MLPS";
     public static final String ARC_TYPE_TRANS = "Transfer";
+    public static final String ARC_TYPE_Injection = "Injection";
 
     public static String formateDate(Date date) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

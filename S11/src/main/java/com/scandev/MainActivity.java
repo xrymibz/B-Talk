@@ -40,7 +40,8 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        checkUpdate();
+       // 关掉检查更新
+     checkUpdate();
         setContentView(R.layout.activity_login);
 
         final String[] carrieds = getResources().getStringArray(R.array.carriers);

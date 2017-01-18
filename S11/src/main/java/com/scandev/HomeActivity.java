@@ -133,7 +133,8 @@ public class HomeActivity extends ActionBarActivity {
                     editor.putString("laneType", laneType);
                     editor.commit();
                     int laneId = (Integer) lane.get("laneId");
-                    System.out.println("You've choosed" + laneId + "," + lane.get("laneName"));
+                    System.out.println("You've choosed" + laneId + "," + lane.get("laneName") +"   ");
+                    System.out.println(login_user.getString("arcType", null));
                     Intent intent = new Intent();
                     intent.putExtra("laneId", laneId + "");
                     intent.putExtra("laneType", laneType + "");

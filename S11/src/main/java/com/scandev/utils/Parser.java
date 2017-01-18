@@ -47,6 +47,9 @@ public class Parser {
                 matcher = pattern.matcher(barCode);
                 if (matcher.matches()) return true;
                 else return false;
+            case Constant.ARC_TYPE_Injection://Injection
+                returnValue = true;
+                break;
             default:
                 return true;
         }

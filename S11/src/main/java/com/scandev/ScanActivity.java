@@ -1,5 +1,6 @@
 package com.scandev;
 
+import java.sql.SQLOutput;
 import java.util.*;
 
 import android.media.MediaScannerConnection;
@@ -100,6 +101,7 @@ public class ScanActivity extends ActionBarActivity
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         nowArc = login_user.getString("arcType", null) + login_user.getInt("arcId", 0);
+
         if (nowArc == null) {//!!!!!!!!!!!!!!!!!!!!!!!
             Log.e(TAG, "nowArc aquire fail");
         }
@@ -160,6 +162,8 @@ public class ScanActivity extends ActionBarActivity
     }
 
     public void addScanResult(final String scanResult) {
+        System.out.println("scanRecordList : " +scanRecordList +" checkedList  :  "+ checkedList+"   notCheckedList: "+notCheckedList);
+
         if (scanRecordList.containsKey(scanResult) || checkedList.contains(scanResult)) {
             S11Application.playSound(1, 1);
             Toast toast = Toast.makeText(getApplicationContext(),
@@ -168,6 +172,7 @@ public class ScanActivity extends ActionBarActivity
             toast.show();
             return;
         }
+        System.out.println(notCheckedList.contains(scanResult)+"   arctype :   "+uploadData.get("arctype")) ;
         if (!notCheckedList.contains(scanResult)) {
             if (!Parser.validateBarCode(scanResult, uploadData.get("arctype"), uploadData.get("sourceFC"))) {
                 //给出错货报警音,弹出TOAST提示

@@ -91,10 +91,13 @@ public class UpdateVersionService {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        if (new_version.equals(now_version)) {
+        try{
+        if (Double.parseDouble(new_version)<=Double.parseDouble(now_version)) {
             return false;
         } else {
             return true;
+        }}catch (Exception e){
+            return false;
         }
     }
 
