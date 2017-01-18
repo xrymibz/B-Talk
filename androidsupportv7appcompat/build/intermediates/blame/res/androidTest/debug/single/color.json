@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_background_cache_hint_selector_material_light.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\renjicui\\Project\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_background_cache_hint_selector_material_dark.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\androidsupportv7appcompat\\build\\intermediates\\bundles\\debug\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

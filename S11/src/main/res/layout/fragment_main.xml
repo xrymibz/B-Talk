@@ -1,0 +1,147 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.scandev.MainActivity$PlaceholderFragment" />
+<!-- 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+</RelativeLayout>
+
+<span style="font-family:Arial;font-size:18px;"><?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bkcolor"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/topbg2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+         
+		<ImageView   
+        android:id="@+id/xx_id"  
+        android:contentDescription="@string/app_name" 
+        android:layout_width="wrap_content"   
+        android:layout_height="wrap_content"   
+        android:src="@drawable/pic" />  
+	 
+        
+        
+    </LinearLayout>
+
+   <RelativeLayout
+        android:id="@+id/editRel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+		<RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="14dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:background="@android:color/white">
+		   <TextView
+                android:id="@+id/carried"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/carried"
+                android:textColor="#000"
+                android:textSize="17sp" /> 
+		    <Spinner
+		        android:id="@+id/carriedArrays"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" />
+		</RelativeLayout>
+		
+        <RelativeLayout
+            android:id="@+id/accountRel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/preference_first_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/account"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/accountEdittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/account"
+                android:background="@null"
+                android:hint="@string/account"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pwdRel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountRel"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/preference_last_item"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/pwd"
+                android:textColor="#000"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/pwdEdittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/pwd"
+                android:background="@null"
+                android:hint="@string/pwd"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        
+    </RelativeLayout>
+
+   <Button
+       android:id="@+id/login_in"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginRight="10dp"
+       android:background="@drawable/normal_btn"
+       android:text="@string/login_in"
+       android:textColor="#ffffff" />
+
+</LinearLayout>-->

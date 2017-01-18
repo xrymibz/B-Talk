@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/selector_list"
+    >
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/exceptionType"
+        android:layout_weight="0.8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="货物破损"/>
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/barCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="csX11123123E"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/imageFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"/>
+
+</LinearLayout>

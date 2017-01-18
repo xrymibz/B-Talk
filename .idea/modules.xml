@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/B-Talk.iml" filepath="$PROJECT_DIR$/B-Talk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/S11/S11.iml" filepath="$PROJECT_DIR$/S11/S11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidsupportv7appcompat/androidsupportv7appcompat.iml" filepath="$PROJECT_DIR$/androidsupportv7appcompat/androidsupportv7appcompat.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffe1e0de" >
+    
+    <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:background="#18BC9C">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:lines="1"
+            android:text="获取五联单号"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    	<Button
+        	android:id="@+id/button"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="30dp"
+        	android:layout_marginRight="20dp"
+        	android:layout_marginLeft="20dp"
+        	android:text="使用扫描枪扫描" />
+        
+    	<!--<Button-->
+        	<!--android:id="@+id/button1"-->
+        	<!--android:layout_width="fill_parent"-->
+        	<!--android:layout_height="wrap_content"-->
+        	<!--android:layout_marginTop="20dp"-->
+        	<!--android:layout_marginRight="20dp"-->
+        	<!--android:layout_marginLeft="20dp"-->
+        	<!--android:text="使用摄像头扫描" />-->
+ 		<Button
+        	android:id="@+id/button2"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp"
+        	android:layout_marginRight="20dp"
+        	android:layout_marginLeft="20dp"
+        	android:text="手动搜索" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/qrcode_bitmap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+</LinearLayout>

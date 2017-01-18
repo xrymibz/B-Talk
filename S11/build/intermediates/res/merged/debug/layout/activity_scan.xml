@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/canZero"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+        <EditText
+            android:id="@+id/num"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/zerobtn"
+            android:hint="0"
+            android:focusable="false"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/zerobtn"
+            android:id="@+id/zerobtn"
+            android:layout_alignBottom="@+id/num"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_function"
+            android:onClick="zeroNum"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/scanHead"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+         <EditText
+             android:layout_weight="2"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:id="@+id/nowScanIdEdit"
+             android:layout_alignParentTop="true"
+             android:layout_alignParentLeft="true"
+             android:layout_toLeftOf="@+id/addToScanList"
+             android:hint="@string/hint_nowScan"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/addToList"
+            android:id="@+id/addToScanList"
+            android:background="@drawable/selector_button_function"
+            android:onClick="addToList"
+             />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/scans"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:textSize="25sp"
+    />
+
+    <LinearLayout
+        android:id="@+id/operator"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_button_system"
+        >
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/uncheck"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:background="@drawable/selector_button_system"
+            android:layout_centerVertical="true"
+            android:onClick="cancel"/>
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/upload"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:background="@drawable/selector_button_system"
+            android:onClick="pickup"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/selector_button_system"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="delete"/>
+    </LinearLayout>
+
+</LinearLayout>

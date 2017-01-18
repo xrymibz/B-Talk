@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Linker</string>
+
+    <string name="login_in">登 录</string>
+    <string name="carried">运输商</string>
+    <string name="account">用户名</string>
+    <string name="pwd">密  码</string>
+    <string name="pleaseselect">请选择</string>
+    <string name="selectcarrier">选择一个运输商</string>
+
+    <string name="title_activity_home">请选择Lane</string>
+    <string name="title_activity_function">功能选择</string>
+    <string name="title_activity_arc">请选择Arc</string>
+    <string name="title_activity_scan">开始扫描</string>
+    <string name="title_activity_history">扫描历史查询</string>
+    <string name="title_activity_exceptionquery">异常查询</string>
+    <string name="title_activity_exceptiondetail">异常详情</string>
+    <string name="title_activity_exceptioncheck">异常查看</string>
+    <string name="title_activity_exception_edit">编辑异常</string>
+
+    <string name="hint_nowScan">输入条码号</string>
+    <string name="addToList">录入</string>
+    <string name="zerobtn">清零</string>
+    <string name="uncheck">撤销</string>
+    <string name="delete">删除</string>
+    <string name="upload">上传 </string>
+
+    <string name="barcode_error">条码错误</string>
+    <string name="excess_error">货物找回</string>
+    <string name="list_null">请开始扫描</string>
+    <string name="list_get">数据获取成功</string>
+
+    <string name="review_expt">查看异常</string>
+    <string name="supple_expt">补报异常</string>
+    <string name="back_to_scan">返回扫描</string>
+    <string name="sure_to_upload">确认上传</string>
+    <string name="listtotalnum">清单总数: </string>
+    <string name="supposedscannum">本次应扫: </string>
+    <string name="scanednum">实际扫描: </string>
+    <string name="notscanednum">尚未扫描: </string>
+    <string name="excessnum">缺货找回: </string>
+    <string name="exceptionnum">发现异常: </string>
+    <string name="piece">个</string>
+
+    <string name="positive">确认</string>
+    <string name="negative">取消</string>
+    <string name="notify">提示</string>
+
+    <string name="havechecked">本条码已经扫描</string>
+    <string name="haventscan">还未扫描!</string>
+    <string name="suretoexcess">该货物不在本次扫描任务中但可识别,是否以货品找回方式录入?</string>
+
+    <string name="suretozeorclear">是否将此次计数清零?</string>
+    <string name="suretodelete1">已选择</string>
+    <string name="suretodelete2">项,是否删除?</string>
+
+    <string name="deleteexception1">是否删除这</string>
+    <string name="deleteexception2">条异常?</string>
+
+    <string name="pickupconfirmtitle">上传确认</string>
+
+    <string name="uploadfail">上传失败!</string>
+    <string name="downloadfail">请求失败!</string>
+    <string name="networkfail">网络连接失败!</string>
+    <string name="time_error">时间选择有误</string>
+
+    <string name="pleasewait">请稍等...</string>
+    <string name="logining">登录中...</string>
+    <string name="uploading">上传中...</string>
+    <string name="downloading">请求中...</string>
+
+    <string name="suretoexit">确定要退出吗?</string>
+
+    <string name="select_exception_type">选取异常类型</string>
+    <string name="CargoDamage">货物破损</string>
+    <string name="BarcodeMiss">条码缺失</string>
+    <string name="CargoExcess">额外收货</string>
+    <string name="Others">其他异常</string>
+
+    <string name="sure_no_description">是否确定不填写问题描述?</string>
+    <string name="sure_to_uploadexception">是否上传此异常?</string>
+    <string name="sure_to_addexception">是否添加此异常?</string>
+
+    <string name="wu">无</string>
+    <string name="go_to_history">查看历史</string>
+
+    <string name="case_scan_title">扫描箱型</string>
+    <string name="case_scan_now1">请为VReturn货物扫描或选择其包装箱型</string>
+    <string name="case_scan_now2">若为自有箱型请点击\"SIOC\"</string>
+    <string name="owned_case">自有箱型</string>
+    <string name="mannual_select">自选箱型</string>
+
+    <string name="title_activity_fullscreen_pic"></string>
+    <string name="dummy_button">返回</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="Localhost">https://aits.cn-north-1.eb.amazonaws.com.cn/</string>
+</resources>

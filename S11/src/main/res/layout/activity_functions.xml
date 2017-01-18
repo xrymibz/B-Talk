@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/selector_button_system"
+        android:text="开始扫描"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:onClick="beginScan"/>
+    <Button
+        android:id="@+id/historyBtn"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/selector_button_system"
+        android:text="记录查询"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:onClick="checkHistory"/>
+    <Button
+        android:id="@+id/postException"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/selector_button_system"
+        android:text="异常上传"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:onClick="postException"/>
+
+    <Button
+        android:id="@+id/queryException"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/selector_button_system"
+        android:text="异常查询"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:onClick="queryException"
+        android:visibility="visible"/>
+</LinearLayout>

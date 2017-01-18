@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="places">
+        <item>库外操作</item>
+        <item>库内操作</item>
+    </string-array>
+    <string-array name="destinationfc">
+        <item>PEK3</item>
+        <item>CAN4</item>
+    </string-array>
+    <string-array name="sortcode">
+        <item>V01</item>
+        <item>V02</item>
+    </string-array>
+    <string-array name="carriers">
+        <item>福路通</item>
+        <item>上海展欣</item>
+        <item>江苏邮政</item>
+        <item>深圳飞力士</item>
+        <item>上海申丝</item>
+        <item>广州联宏</item>
+        <item>天环物流</item>
+        <item>成都金桥</item>
+        <item>丰和园</item>
+        <item>辛克物流</item>
+        <item>嘉捷信达</item>
+    </string-array>
+
+    <string-array name="exceptions">
+        <item>货物破损</item>
+        <item>条码缺失</item>
+        <item>额外收货</item>
+        <item>其他异常</item>
+    </string-array>
+
+    <string-array name="Box_array">
+        <item>BOX0</item>
+        <item>BOX1</item>
+        <item>BOX3</item>
+        <item>BOX4</item>
+        <item>BOX5</item>
+        <item>BOX6</item>
+        <item>BOX7</item>
+        <item>BOX8</item>
+
+        <item>BOX10</item>
+        <item>BOX11</item>
+        <item>BOX12</item>
+        <item>BOX13</item>
+        <item>BOX14</item>
+        <item>BOX15</item>
+        <item>BOX16</item>
+        <item>BOX17</item>
+        <item>BOX18</item>
+        <item>BOX19</item>
+        <item>BOX23</item>
+        <item>BOX24</item>
+        <item>BOX31</item>
+        <item>BOX32</item>
+        <item>BOX99</item>
+
+        <item>DBBOX1</item>
+        <item>DBBOX2</item>
+        <item>DBBOX3</item>
+    </string-array>
+</resources>

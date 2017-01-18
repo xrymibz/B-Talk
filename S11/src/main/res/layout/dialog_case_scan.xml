@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/dialog_case_layout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentTop="true"
+        android:textSize="30dp"
+        android:text="@string/case_scan_title"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:includeFontPadding="false"
+        android:background="#992a942f"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/case_scan_now1"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/case_scan_now2"
+        android:textSize="20dp"/>
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/specialCase"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="自有箱型"
+            android:textSize="17dp"
+            android:layout_marginRight="20dp"/>
+
+        <com.scandev.View.NoDefaultSpinner
+            android:id="@+id/mannualSelect"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/Box_array"
+            android:prompt="@string/mannual_select"
+            />
+
+    </LinearLayout>-->
+
+
+
+    <com.scandev.View.MyRadioGroup
+        android:id="@+id/group0"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/Box0"
+                style="@style/Radio_Button_Style"
+                android:text="Box0"/>
+
+            <RadioButton
+                android:id="@+id/Box1"
+                style="@style/Radio_Button_Style"
+                android:text="Box1"/>
+
+            <RadioButton
+                android:id="@+id/Box3"
+                style="@style/Radio_Button_Style"
+                android:text="Box3"/>
+
+            <RadioButton
+                android:id="@+id/Box4"
+                style="@style/Radio_Button_Style"
+                android:text="Box4"/>
+
+            <RadioButton
+                android:id="@+id/Box5"
+                style="@style/Radio_Button_Style"
+                android:text="Box5"/>
+
+            <RadioButton
+                android:id="@+id/Box6"
+                style="@style/Radio_Button_Style"
+                android:text="Box6"/>
+
+            <RadioButton
+                android:id="@+id/Box7"
+                style="@style/Radio_Button_Style"
+                android:text="Box7"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/Box8"
+                style="@style/Radio_Button_Style"
+                android:text="Box8"/>
+
+            <RadioButton
+                android:id="@+id/Box10"
+                style="@style/Radio_Button_Style"
+                android:text="Box10"/>
+
+            <RadioButton
+                android:id="@+id/Box11"
+                style="@style/Radio_Button_Style"
+                android:text="Box11"/>
+
+            <RadioButton
+                android:id="@+id/Box12"
+                style="@style/Radio_Button_Style"
+                android:text="Box12"/>
+
+            <RadioButton
+                android:id="@+id/Box13"
+                style="@style/Radio_Button_Style"
+                android:text="Box13"/>
+
+            <RadioButton
+                android:id="@+id/Box14"
+                style="@style/Radio_Button_Style"
+                android:text="Box14"/>
+
+            <RadioButton
+                android:id="@+id/Box15"
+                style="@style/Radio_Button_Style"
+                android:text="Box15"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+            <RadioButton
+                android:id="@+id/Box16"
+                style="@style/Radio_Button_Style"
+                android:text="Box16"/>
+
+            <RadioButton
+                android:id="@+id/Box17"
+                style="@style/Radio_Button_Style"
+                android:text="Box17"/>
+
+            <RadioButton
+                android:id="@+id/Box18"
+                style="@style/Radio_Button_Style"
+                android:text="Box18"/>
+
+            <RadioButton
+                android:id="@+id/Box19"
+                style="@style/Radio_Button_Style"
+                android:text="Box19"/>
+
+            <RadioButton
+                android:id="@+id/Box23"
+                style="@style/Radio_Button_Style"
+                android:text="Box23"/>
+
+            <RadioButton
+                android:id="@+id/Box24"
+                style="@style/Radio_Button_Style"
+                android:text="Box24"/>
+
+            <RadioButton
+                android:id="@+id/Private"
+                style="@style/Radio_Button_Style"
+                android:text="SIOC"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+            <RadioButton
+                android:id="@+id/Box31"
+                style="@style/Radio_Button_Style"
+                android:text="Box31"/>
+
+            <RadioButton
+                android:id="@+id/Box32"
+                style="@style/Radio_Button_Style"
+                android:text="Box32"/>
+
+            <RadioButton
+                android:id="@+id/Box99"
+                style="@style/Radio_Button_Style"
+                android:text="Box99"/>
+
+            <RadioButton
+                android:id="@+id/DBBox1"
+                style="@style/Radio_Button_Style"
+                android:text="DBBox1"/>
+
+            <RadioButton
+                android:id="@+id/DBBox2"
+                style="@style/Radio_Button_Style"
+                android:text="DBBox2"/>
+
+            <RadioButton
+                android:id="@+id/DBBox3"
+                style="@style/Radio_Button_Style"
+                android:text="DBBox3"/>
+        </LinearLayout>
+    </com.scandev.View.MyRadioGroup>
+
+   <Button
+       android:id="@+id/confirmBox"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/selector_button_system"
+       android:layout_marginTop="15dp"
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:text="确认箱型"
+       android:textSize="30dp"/>
+
+    <!--<ListView
+        android:id="@+id/caseList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/carriers">
+
+    </ListView>-->
+
+
+
+</LinearLayout>

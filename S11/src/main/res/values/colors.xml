@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="operatore_bg">#30a8dd</color>
+    <color name="confirm_button">#FF0000</color>
+    <color name="SeaGreen">#2E8B57</color>
+    <color name="title_bg">#E8D098</color>
+    <color name="new_code">#E8643C</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

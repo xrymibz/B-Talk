@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="bkcolor">#cccccc</drawable>
+    <drawable name="topbg2">#ffffff</drawable>
+    <drawable name="normal_btn">#30a8dd</drawable>
+    <drawable name="preference_first_item">#ffffff</drawable>
+    <drawable name="preference_last_item">#ffffff</drawable>
+    <drawable name="item">#ffffff</drawable>
+    <drawable name="lineback">#36b6e5</drawable>
+    <drawable name="bkcolor2">#f3f3f3</drawable>
+    <drawable name="selector">#36b6e5</drawable>
+    <drawable name="actionbar_background">#30a8dd</drawable>
+    <drawable name="list1">#CCC</drawable>
+    <drawable name="loadingback">#000000</drawable>
+</resources>

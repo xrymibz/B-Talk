@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/libs/core-2.2.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/libs/javabase64-1.3.1.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/ChooseVBA_IdAty.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/CustomHttpClient.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/DetailAty.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/InfraredDetailAty.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/ManualSearchAty.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/ScanActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/ScanOrManualAty.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/UpdateStatusAty.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/View/FullscreenImageView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/View/PhotoListAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/tasks/ExceptionQueryTask.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/tasks/GetScanHistoryTask.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/tasks/LoginTask.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/tasks/UpdateVersionService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/tasks/UploadScanListTask.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/utils/ImageUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/scandev/utils/ZipUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_choose_vbaid.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_detail.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_detail_wait.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_infrared_detail.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_manual_search.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_manual_search_wait.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_scan_or_manual.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_update_status.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/activity_update_status_wait.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/dropdown_item.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/layout/item.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/res/raw/zhengshu.crt" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>
