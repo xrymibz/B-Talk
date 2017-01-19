@@ -40,8 +40,8 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // 关掉检查更新
-     checkUpdate();
+        // 关掉检查更新
+       //checkUpdate();
         setContentView(R.layout.activity_login);
 
         final String[] carrieds = getResources().getStringArray(R.array.carriers);
@@ -110,7 +110,7 @@ public class MainActivity extends ActionBarActivity {
             if (updateVersionService.isNeedUpdate()) {
                 showUpdateDialog();
             } else {
-                Toast.makeText(MainActivity.this, "已是最新版本" + info.getVersion(), Toast.LENGTH_SHORT).show();
+               Toast.makeText(MainActivity.this, "已是最新版本" + info.getVersion(), Toast.LENGTH_SHORT).show();
             }
         }
     };

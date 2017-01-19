@@ -201,6 +201,7 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
                 JSONArray arr = res.getJSONArray("data");
                 int userId = Integer.parseInt(arr.get(0).toString());
                 String carrierAbbr = arr.get(1).toString();
+                String isInjection = arr.get(2).toString();
 
                 System.out.println("userId:" + userId  +"carrierAbbr :"+carrierAbbr);
 
@@ -208,6 +209,7 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
                 editor.putString("username", userName);
                 editor.putString("pwd", passWord);
                 editor.putInt("userId", userId);
+                editor.putString("isInjection", isInjection);
                 editor.putString("carrierName", carrierName);
                 editor.commit();
 

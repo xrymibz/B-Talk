@@ -54,6 +54,7 @@ public class HomeActivity extends ActionBarActivity {
     private static final String TAG = "LanesActivity";
     private final OkHttpClient client = new OkHttpClient();
     private static String carrier = "";
+    private static String isInjection = "";
     private JSONObject res = null;
     private JSONArray lanes = null;
     private ListView listView = null;
@@ -99,6 +100,7 @@ public class HomeActivity extends ActionBarActivity {
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         String username = login_user.getString("username", "");
         carrier = login_user.getString("carrierAbbr", "");
+        isInjection = login_user.getString("isInjection", "");
         try {
             new Thread(getLanes).start();
         } catch (Exception e) {
@@ -175,8 +177,9 @@ public class HomeActivity extends ActionBarActivity {
             try {
                 RequestBody formBody = new FormEncodingBuilder()
                         .add("carrierId", carrier)
+                        .add("isInjection",isInjection)
                         .build();
-
+                System.out.println("isInjection zzz   :   "+isInjection);
                 Request request = new Request.Builder()
                         .url(Urls.URL_GETLANESByCARRIER.url())
                         .header("User-Agent", "OkHttp Headers.java")
