@@ -101,6 +101,7 @@ public class ScanActivity extends ActionBarActivity
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         nowArc = login_user.getString("arcType", null) + login_user.getInt("arcId", 0);
+ //       System.out.println("login_user.getString(\"arcType\", null) "+ login_user.getString("arcType", null));
 
         if (nowArc == null) {//!!!!!!!!!!!!!!!!!!!!!!!
             Log.e(TAG, "nowArc aquire fail");

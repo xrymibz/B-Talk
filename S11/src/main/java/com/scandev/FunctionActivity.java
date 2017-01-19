@@ -10,7 +10,7 @@ import android.view.View;
 
 public class FunctionActivity extends ActionBarActivity {
     private int laneId;
-    private String laneType;
+    private String arcType;
     private String TAG = "FunctionActivity";
 
     @Override
@@ -23,9 +23,9 @@ public class FunctionActivity extends ActionBarActivity {
         Intent intent = getIntent();
 
         laneId = Integer.parseInt(intent.getStringExtra("laneId"));
-        laneType = intent.getStringExtra("laneType");
+        arcType = intent.getStringExtra("arcType");
 
-        System.out.println("landid : " + laneId + "laneType : "+ laneType);
+        System.out.println("landid : " + laneId + "arcType : "+ arcType);
     }
 
     public void beginScan(View v) {
@@ -34,7 +34,7 @@ public class FunctionActivity extends ActionBarActivity {
         intent.putExtra("laneId", laneId + "");
         intent.putExtra("functionCode", 0);
 
-        if(laneType.equals("Injection")){
+        if(arcType.equals("Injection")){
             intent.setClass(FunctionActivity.this,  ScanActivity.class);
         }else{
             intent.setClass(FunctionActivity.this, ArcActivity.class);

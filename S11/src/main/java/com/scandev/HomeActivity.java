@@ -127,17 +127,17 @@ public class HomeActivity extends ActionBarActivity {
                     SharedPreferences.Editor editor = login_user.edit();
                     String laneName = (String) lane.get("laneName");
                     String laneE = (String) lane.get("laneE");
-                    String laneType = (String) lane.get("laneType");
+                    String arcType = (String) lane.get("arcType");
                     editor.putString("laneName", laneName);
                     editor.putString("laneE", laneE);
-                    editor.putString("laneType", laneType);
+                    editor.putString("arcType", arcType);
                     editor.commit();
                     int laneId = (Integer) lane.get("laneId");
                     System.out.println("You've choosed" + laneId + "," + lane.get("laneName") +"   ");
-                    System.out.println(login_user.getString("arcType", null));
+//                    System.out.println(login_user.getString("arcType", null));
                     Intent intent = new Intent();
                     intent.putExtra("laneId", laneId + "");
-                    intent.putExtra("laneType", laneType + "");
+                    intent.putExtra("arcType", arcType + "");
                     intent.setClass(HomeActivity.this, FunctionActivity.class);
                     startActivity(intent);
                 } catch (JSONException e) {

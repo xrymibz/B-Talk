@@ -89,7 +89,8 @@
             android:padding="8dp"
             android:text="@string/account"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            />
 
         <EditText
             android:id="@+id/username"

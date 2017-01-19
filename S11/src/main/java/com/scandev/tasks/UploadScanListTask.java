@@ -1,9 +1,11 @@
 package com.scandev.tasks;
 
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
@@ -16,6 +18,7 @@ import com.scandev.model.ExceptionItem;
 import com.scandev.model.ExceptionType;
 import com.scandev.model.Urls;
 import com.scandev.utils.DataLoad;
+import com.scandev.utils.GZIPInputStream;
 import com.scandev.utils.Md5Util;
 import com.scandev.utils.MyHostnameVerifier;
 import com.scandev.utils.MyTrustManager;
@@ -25,6 +28,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
@@ -61,6 +65,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
                 activity.getString(R.string.uploading), true);
     }
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     @Override
     protected Integer doInBackground(Map<String, String>... params) {
         scanContent = new JSONObject();
@@ -73,15 +78,16 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
 
         System.out.println("Let's FUCK"+scanContent.toString());
 
-        try {
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            GZIPOutputStream gzip = new GZIPOutputStream(out);
-            gzip.write(scanContent.toString().getBytes());
-            gzip.close();
-            out1 = out.toString("ISO-8859-1");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            ByteArrayOutputStream out = new ByteArrayOutputStream();
+//            GZIPOutputStream gzip = new GZIPOutputStream(out);
+//            gzip.write(scanContent.toString().getBytes());
+//            gzip.close();
+//           out1 = out.toString("ISO-8859-1");
+//            out.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         try {
             Log.i(TAG, "begin request new");
@@ -89,12 +95,11 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
             sc.init(null, new TrustManager[]{new MyTrustManager()}, new SecureRandom());
             client.setSslSocketFactory(sc.getSocketFactory());
             client.setHostnameVerifier(new MyHostnameVerifier());
-
             String sign = Md5Util.getMD5Str(Constant.app_secret_true + Constant.app_key_true
                     + Constant.METHOD_UPLOAD).toUpperCase();
             RequestBody formBody = new FormEncodingBuilder()
                     .add("sign", sign)
-                    .add("scanContent", out1)
+                    .add("scanContent", scanContent.toString())
                     .build();
             Request request = new Request.Builder()
                     .url(Urls.URL_UPLOAD.url())
@@ -106,6 +111,8 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
             date1 = new Date();
             Response response = client.newCall(request).execute();
             date2 = new Date();
+
+
             if (response.isSuccessful()) {
                 System.out.println(response.code());
                 String string = response.body().string();
