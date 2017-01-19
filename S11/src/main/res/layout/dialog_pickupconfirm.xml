@@ -9,12 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dialogTitle"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="15dp"
         android:layout_marginRight="30dp"
         android:layout_alignParentTop="true"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textColor="#FFFFFF"/>
 
     <TextView
@@ -27,11 +27,11 @@
         android:id="@+id/topBar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="5dp"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/operator"
@@ -47,7 +47,8 @@
             android:id="@+id/lane"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_below="@+id/operator"
+            android:layout_alignParentLeft="true"
             android:textSize="20dp"
             android:text="线路"
         >
@@ -60,11 +61,11 @@
 
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
 
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        android:paddingBottom="8dp"
+        android:paddingBottom="5dp"
         android:orientation="vertical">
 
         <TextView
@@ -136,7 +137,7 @@
             android:layout_height="60dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp">
             <Button
                 android:id="@+id/reviewException"
                 android:text="@string/review_expt"
@@ -177,9 +178,9 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
 
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginBottom="15dp"
         android:orientation="horizontal">
         <Button
