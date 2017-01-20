@@ -56,7 +56,14 @@ public class FunctionActivity extends ActionBarActivity {
         Intent intent = new Intent();
         intent.putExtra("laneId", laneId + "");
         intent.putExtra("functionCode", 1);
-        intent.setClass(FunctionActivity.this, ArcActivity.class);
+        if(arcType.equals("Injection")){
+            intent.setClass(FunctionActivity.this, ExceptionEditActivity.class);
+            intent.putExtra("fluency", -1);
+        }else{
+            intent.setClass(FunctionActivity.this, ArcActivity.class);
+        }
+
+
         startActivity(intent);
     }
 
@@ -65,7 +72,11 @@ public class FunctionActivity extends ActionBarActivity {
         Intent intent = new Intent();
         intent.putExtra("laneId", laneId + "");
         intent.putExtra("functionCode", 2);
-        intent.setClass(FunctionActivity.this, ArcActivity.class);
+        if(arcType.equals("Injection")){
+            intent.setClass(FunctionActivity.this, ExceptionQueryActivity.class);
+        }else{
+            intent.setClass(FunctionActivity.this, ArcActivity.class);
+        }
         startActivity(intent);
     }
 
