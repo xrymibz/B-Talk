@@ -397,6 +397,7 @@ public class ExceptionEditActivity extends ActionBarActivity
     @TargetApi(Build.VERSION_CODES.KITKAT)
     @SuppressLint("NewApi")
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d("picture de chuli","chulistart   "+requestCode+"   " +resultCode);
         if(picPathTemp!=null){
             MediaScannerConnection.scanFile(this, new String[]
                     {Environment.getExternalStoragePublicDirectory
@@ -522,6 +523,7 @@ public class ExceptionEditActivity extends ActionBarActivity
 
         @Override
         protected Bitmap doInBackground(String... params) {
+            Log.d("compressBmpToFile","yasuotupian");
             Bitmap pic = ImageUtil.decodeSampledBitmapFromPath(params[0], reqWidth, reqWidth);
             File file = new File(params[0]);
             ImageUtil.compressBmpToFile(pic, file);

@@ -116,6 +116,8 @@ public class UploadExceptionTask extends AsyncTask<ExceptionItem, Integer, Integ
                 File file = new File(uriList[i]);
                 multipartBuilder.addFormDataPart("images", file.getName(),
                         RequestBody.create(MediaType.parse("image/png"), file));
+                Log.d("file.getName()",uriList[i]);
+
             }
 
             Request request = new Request.Builder()
