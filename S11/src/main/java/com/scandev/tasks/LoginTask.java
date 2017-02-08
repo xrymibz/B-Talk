@@ -63,7 +63,7 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
 
     // AITS
    // private String LocalHost = "http://127.0.0.1:8080/";
-     private String LocalHost = "https://aits.cn-north-1.eb.amazonaws.com.cn/";
+    private String LocalHost = "https://aits.cn-north-1.eb.amazonaws.com.cn/";
     private HttpResponse responsepost;
     private InputStream inputStream;
     private String cookie = "none";

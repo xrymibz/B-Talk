@@ -1718,7 +1718,7 @@ containing a value of this type.
         public static final int alertTitle=0x7f0d0030;
         public static final int always=0x7f0d001c;
         public static final int arc=0x7f0d00d6;
-        public static final int arcForExcept=0x7f0d006e;
+        public static final int arcForExcept=0x7f0d006d;
         public static final int arcItem=0x7f0d00e7;
         public static final int arcItemText=0x7f0d00e8;
         public static final int arcName=0x7f0d0077;
@@ -1811,7 +1811,7 @@ containing a value of this type.
         public static final int l1=0x7f0d0055;
         public static final int l2=0x7f0d005c;
         public static final int lane=0x7f0d00d5;
-        public static final int laneForExcept=0x7f0d006d;
+        public static final int laneForExcept=0x7f0d006e;
         public static final int laneItem=0x7f0d00f1;
         public static final int laneItemText=0x7f0d00f2;
         public static final int laneName=0x7f0d0076;

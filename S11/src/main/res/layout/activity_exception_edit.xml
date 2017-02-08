@@ -28,24 +28,26 @@
             android:gravity="center_vertical">
 
             <TextView
-                android:id="@+id/laneForExcept"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:textSize="15dp"
-                android:text="Lane Name:"/>
-
-            <TextView
                 android:id="@+id/arcForExcept"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
+                android:layout_below="@+id/laneForExcept"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
                 android:textSize="15dp"
-                android:text="Arc Info:"/>
+                android:text="Arc Info:"
+                android:layout_alignLeft="@+id/laneForExcept"
+                android:layout_alignStart="@+id/laneForExcept" />
+
+            <TextView
+                android:id="@+id/laneForExcept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Lane Name:"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
         </RelativeLayout>
 
         <LinearLayout
