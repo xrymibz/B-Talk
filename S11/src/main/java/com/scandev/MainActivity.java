@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 关掉检查更新
-       //checkUpdate();
+       checkUpdate();
         setContentView(R.layout.activity_login);
 
         final String[] carrieds = getResources().getStringArray(R.array.carriers);

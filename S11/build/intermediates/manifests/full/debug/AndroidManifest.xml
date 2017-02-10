@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scandev"
     android:versionCode="1"
-    android:versionName="10.5" >
+    android:versionName="10.3" >
 
     <uses-sdk
         android:minSdkVersion="12"
@@ -10,15 +10,13 @@
     <!-- honeywell ****************************** -->
     <uses-permission android:name="com.honeywell.decode.permission.DECODE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.scandev.S11Application"
         android:allowBackup="true"
-        android:debuggable="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/CustomActionBarTheme" >

@@ -38,7 +38,7 @@ public class UpdateVersionService {
     }
 
     public UpdateInfo getUpDateInfo() throws Exception {
-        String path = Constant.URL_UPDATE + "/update.txt";
+        String path = Constant.URL_UPDATE_XIETIAN + "/update.txt";
         StringBuffer sb = new StringBuffer();
         String line = null;
         BufferedReader reader = null;
@@ -59,6 +59,8 @@ public class UpdateVersionService {
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
             }
+            System.out.println(sb.toString());
+            System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -91,6 +93,8 @@ public class UpdateVersionService {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+        System.out.println("new_version :" + new_version);
+        System.out.println("now_version :" + now_version);
         try{
         if (Double.parseDouble(new_version)<=Double.parseDouble(now_version)) {
             return false;
