@@ -9,7 +9,8 @@
     <string name="pleaseselect">请选择</string>
     <string name="selectcarrier">选择一个运输商</string>
 
-    <string name="title_activity_home">请选择Lane</string>
+    <string name="title_activity_home">请选择路线</string>
+    <string name="title_activity_carstype">请选择车型</string>
     <string name="title_activity_function">功能选择</string>
     <string name="title_activity_arc">请选择Arc</string>
     <string name="title_activity_scan">开始扫描</string>

@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import com.scandev.CarNumberActivity;
+import com.scandev.CarsTypeActivity;
 import com.scandev.CustomHttpClient;
 import com.scandev.HomeActivity;
 import com.scandev.MainActivity;
@@ -215,6 +217,8 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
 
                 Intent intent = new Intent();
                 intent.setClass(activity, HomeActivity.class);
+ //               intent.setClass(activity, CarNumberActivity.class);
+ // this  is a carstypeactivity'test                intent.setClass(activity, CarsTypeActivity.class);
                 activity.startActivity(intent);
             } else {
                 String message = res.getString("message");

@@ -36,6 +36,16 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".CarsTypeActivity"
+            android:label="@string/title_activity_carstype"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CarNumberActivity"
+            android:label="@string/title_activity_carstype"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".FunctionActivity"
             android:label="@string/title_activity_function"
             android:launchMode="singleTask"

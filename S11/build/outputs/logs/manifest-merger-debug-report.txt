@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:2:1-137:12
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:2:1-147:12
 	package
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:3:5-26
 		INJECTED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml
@@ -56,7 +56,7 @@ ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:15:5
 	android:name
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:15:22-77
 application
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:17:5-135:19
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:17:5-145:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\xietian\Desktop\B-Talk\S11\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\xietian\Desktop\B-Talk\S11\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\xietian\Desktop\B-Talk\S11\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
@@ -103,7 +103,7 @@ ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:33:9
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:36:13-44
 	android:name
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:34:13-41
-activity#com.scandev.FunctionActivity
+activity#com.scandev.CarsTypeActivity
 ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:38:9-42:52
 	android:screenOrientation
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:42:13-49
@@ -113,143 +113,163 @@ ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:38:9
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:41:13-44
 	android:name
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:39:13-45
-activity#com.scandev.HistoryActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:43:9-54:20
+activity#com.scandev.CarNumberActivity
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:43:9-47:52
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:48:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:47:13-49
 	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:45:13-59
-	android:parentActivityName
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:47:13-59
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:45:13-60
 	android:launchMode
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:46:13-44
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:44:13-44
-meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:51:13-53:64
-	android:value
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:53:17-61
-	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:52:17-63
-activity#com.scandev.ArcActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:55:9-59:52
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:44:13-46
+activity#com.scandev.FunctionActivity
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:48:9-52:52
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:59:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:52:13-49
 	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:57:13-55
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:50:13-60
 	android:launchMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:58:13-44
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:51:13-44
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:56:13-40
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:49:13-45
+activity#com.scandev.HistoryActivity
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:53:9-64:20
+	android:screenOrientation
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:58:13-49
+	android:label
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:55:13-59
+	android:parentActivityName
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:57:13-59
+	android:launchMode
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:56:13-44
+	android:name
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:54:13-44
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:61:13-63:64
+	android:value
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:63:17-61
+	android:name
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:62:17-63
+activity#com.scandev.ArcActivity
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:65:9-69:52
+	android:screenOrientation
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:69:13-49
+	android:label
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:67:13-55
+	android:launchMode
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:68:13-44
+	android:name
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:66:13-40
 activity#com.scandev.ScanActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:60:9-64:70
-	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:63:13-49
-	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:62:13-56
-	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:64:13-67
-	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:61:13-41
-activity#com.scandev.ExceptionEditActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:65:9-69:58
-	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:68:13-49
-	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:67:13-66
-	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:69:13-55
-	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:66:13-50
-activity#com.scandev.ExceptionQueryActivity
 ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:70:9-74:70
 	android:screenOrientation
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:73:13-49
 	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:72:13-66
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:72:13-56
 	android:windowSoftInputMode
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:74:13-67
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:71:13-51
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:71:13-41
+activity#com.scandev.ExceptionEditActivity
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:75:9-79:58
+	android:screenOrientation
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:78:13-49
+	android:label
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:77:13-66
+	android:windowSoftInputMode
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:79:13-55
+	android:name
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:76:13-50
+activity#com.scandev.ExceptionQueryActivity
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:80:9-84:70
+	android:screenOrientation
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:83:13-49
+	android:label
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:82:13-66
+	android:windowSoftInputMode
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:84:13-67
+	android:name
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:81:13-51
 activity#com.scandev.ExceptionDetailActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:75:9-77:70
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:85:9-87:70
 	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:77:13-67
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:87:13-67
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:76:13-52
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:86:13-52
 activity#com.scandev.ExceptionCheckActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:78:9-80:69
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:88:9-90:69
 	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:80:13-66
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:90:13-66
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:79:13-51
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:89:13-51
 activity#com.scandev.FullscreenPicActivity
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:81:9-85:63
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:91:9-95:63
 	android:label
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:84:13-66
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:94:13-66
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:83:13-74
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:93:13-74
 	android:theme
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:85:13-51
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:95:13-51
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:82:13-50
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:92:13-50
 activity#com.scandev.ScanOrManualAty
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:87:9-92:20
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:97:9-102:20
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:90:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:100:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:91:13-60
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:101:13-60
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:89:13-63
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:99:13-63
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:88:13-44
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:98:13-44
 activity#com.scandev.ManualSearchAty
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:101:9-106:20
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:111:9-116:20
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:104:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:114:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:105:13-60
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:115:13-60
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:103:13-63
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:113:13-63
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:102:13-44
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:112:13-44
 activity#com.scandev.ChooseVBA_IdAty
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:108:9-113:20
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:118:9-123:20
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:111:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:121:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:112:13-60
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:122:13-60
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:110:13-63
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:120:13-63
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:109:13-44
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:119:13-44
 activity#com.scandev.DetailAty
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:115:9-120:20
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:125:9-130:20
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:118:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:128:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:119:13-52
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:129:13-52
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:117:13-63
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:127:13-63
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:116:13-38
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:126:13-38
 activity#com.scandev.InfraredDetailAty
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:122:9-127:20
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:132:9-137:20
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:125:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:135:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:126:13-52
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:136:13-52
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:124:13-63
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:134:13-63
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:123:13-46
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:133:13-46
 activity#com.scandev.UpdateStatusAty
-ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:129:9-134:20
+ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:139:9-144:20
 	android:screenOrientation
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:132:13-49
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:142:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:133:13-60
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:143:13-60
 	android:configChanges
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:131:13-63
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:141:13-63
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:130:13-44
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:140:13-44

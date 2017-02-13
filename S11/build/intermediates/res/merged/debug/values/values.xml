@@ -30,6 +30,13 @@
         <item>DBBOX2</item>
         <item>DBBOX3</item>
     </string-array>
+    <string-array name="CarsType">
+        <item>4.2M(12)</item>
+        <item>5.2M(18)</item>
+        <item>6.8M(30)</item>
+        <item>Jinbei(2.7)</item>
+        <item>IVECO(5)</item>
+    </string-array>
     <string-array name="carriers">
         <item>福路通</item>
         <item>上海展欣</item>
@@ -353,6 +360,7 @@
     <string name="suretozeorclear">是否将此次计数清零?</string>
     <string name="time_error">时间选择有误</string>
     <string name="title_activity_arc">请选择Arc</string>
+    <string name="title_activity_carstype">请选择车型</string>
     <string name="title_activity_exception_edit">编辑异常</string>
     <string name="title_activity_exceptioncheck">异常查看</string>
     <string name="title_activity_exceptiondetail">异常详情</string>
@@ -360,7 +368,7 @@
     <string name="title_activity_fullscreen_pic"/>
     <string name="title_activity_function">功能选择</string>
     <string name="title_activity_history">扫描历史查询</string>
-    <string name="title_activity_home">请选择Lane</string>
+    <string name="title_activity_home">请选择路线</string>
     <string name="title_activity_scan">开始扫描</string>
     <string name="uncheck">撤销</string>
     <string name="upload">上传 </string>

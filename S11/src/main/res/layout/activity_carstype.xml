@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bkcolor2"
+    android:orientation="vertical">
+    <!--
+    <TextView
+	        android:id="@+id/arcTitle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/choosearc"
+	        android:textSize="25sp"
+	        android:layout_marginTop="10sp"
+	        android:layout_marginBottom="10sp"
+	        android:textColor="#36b6e5"
+	        android:paddingLeft="10dip"/>
+	    <TextView
+	        android:id="@+id/arcline"
+	        android:layout_below="@id/arcTitle"
+	        android:layout_height="2dp"
+	        android:layout_width="fill_parent"
+	        android:background="@drawable/lineback"/> -->
+    <ListView
+        android:id="@+id/carstypelist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

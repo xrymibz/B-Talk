@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scandev"
     android:versionCode="1"
-    android:versionName="10.3" >
+    android:versionName="10.6" >
 
     <uses-sdk
         android:minSdkVersion="12"
@@ -33,6 +33,16 @@
         <activity
             android:name="com.scandev.HomeActivity"
             android:label="@string/title_activity_home"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scandev.CarsTypeActivity"
+            android:label="@string/title_activity_carstype"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scandev.CarNumberActivity"
+            android:label="@string/title_activity_carstype"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
