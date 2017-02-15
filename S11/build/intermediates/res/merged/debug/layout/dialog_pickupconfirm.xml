@@ -68,14 +68,32 @@
         android:paddingBottom="5dp"
         android:orientation="vertical">
 
+        <!--<TextView-->
+            <!--android:id="@+id/arc"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:text="ARC:ARC信息"-->
+            <!--android:textSize="25dp"-->
+        <!--&gt;-->
+        <!--</TextView>-->
         <TextView
-            android:id="@+id/arc"
+            android:id="@+id/carstype"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="ARC:ARC信息"
-            android:textSize="25dp"
-        >
+            android:layout_marginBottom="5dp"
+            android:text="车型:车型信息"
+            android:textSize="20dp"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/carnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="车牌:车牌信息"
+            android:textSize="20dp"
+            >
         </TextView>
 
         <TextView
@@ -83,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SCANED:总数"
-            android:textSize="25dp"
+            android:textSize="20dp"
             >
         </TextView>
 
@@ -92,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SCANED:应扫"
-            android:textSize="25dp"
+            android:textSize="20dp"
             >
         </TextView>
 
@@ -101,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SCANED:已扫"
-            android:textSize="25dp"
+            android:textSize="20dp"
         >
         </TextView>
 
@@ -110,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NOTSCANED:未扫"
-            android:textSize="25dp"
+            android:textSize="20dp"
         >
         </TextView>
 
@@ -119,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="EXCESS:补货"
-            android:textSize="25dp"
+            android:textSize="20dp"
         >
         </TextView>
 
@@ -128,7 +146,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="EXCEPTION:异常"
-            android:textSize="25dp"
+            android:textSize="20dp"
         >
         </TextView>
 

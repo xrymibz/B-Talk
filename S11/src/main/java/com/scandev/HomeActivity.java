@@ -35,6 +35,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -44,13 +45,19 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class HomeActivity extends ActionBarActivity {
+public class HomeActivity extends Activity {
 
+    private static TextView TitleName = null;
+    private static TextView CarrierName = null;
+    private static Button ComeBack = null;
     private static final String TAG = "LanesActivity";
     private final OkHttpClient client = new OkHttpClient();
     private static String carrier = "";
@@ -93,9 +100,22 @@ public class HomeActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.activity_home);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.activity_title);
+        TitleName = (TextView) findViewById(R.id.titlename);
+        CarrierName = (TextView) findViewById(R.id.carriername);
+        ComeBack = (Button)findViewById(R.id.comeback);
+        TitleName.setText("请选择路线 ");
+        CarrierName.setText("上海展欣");
+
+
+
+
+  //      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         String username = login_user.getString("username", "");
@@ -286,5 +306,9 @@ public class HomeActivity extends ActionBarActivity {
             default:
                 return true;
         }
+    }
+
+    public void comeback(View v) {
+        finish();
     }
 }

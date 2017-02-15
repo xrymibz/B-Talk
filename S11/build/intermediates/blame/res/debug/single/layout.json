@@ -44,12 +44,12 @@
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_detail.xml"
     },
     {
-        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_manual_search.xml",
-        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_manual_search.xml"
-    },
-    {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\list_arc.xml",
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\list_arc.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_manual_search.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_manual_search.xml"
     },
     {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -286,6 +286,10 @@
     {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\list_scan.xml",
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\list_scan.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_title.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_title.xml"
     },
     {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",

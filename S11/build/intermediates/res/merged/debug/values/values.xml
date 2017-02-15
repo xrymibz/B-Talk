@@ -49,6 +49,7 @@
         <item>丰和园</item>
         <item>辛克物流</item>
         <item>嘉捷信达</item>
+        <item>中谊</item>
     </string-array>
     <string-array name="destinationfc">
         <item>PEK3</item>
@@ -91,7 +92,9 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="black">#6c6c6c</color>
     <color name="black_overlay">#66000000</color>
+    <color name="blue">#309bdd</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -144,6 +147,7 @@
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="title_bg">#E8D098</color>
+    <color name="white">#FFFFFF</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -254,6 +258,8 @@
     <drawable name="actionbar_background">#30a8dd</drawable>
     <drawable name="bkcolor">#cccccc</drawable>
     <drawable name="bkcolor2">#f3f3f3</drawable>
+    <drawable name="clr_normal">#30a8dd</drawable>
+    <drawable name="clr_pressed">#309bdd</drawable>
     <drawable name="item">#ffffff</drawable>
     <drawable name="lineback">#36b6e5</drawable>
     <drawable name="list1">#CCC</drawable>
@@ -1371,9 +1377,11 @@
     </style>
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:windowTitleSize">200dp</item>
 
         <!-- 支持库兼容 -->
         <item name="background">@drawable/actionbar_background</item>
+
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -1732,5 +1740,9 @@
         <item name="android:divider">@android:color/transparent</item>
         <item name="android:headerDividersEnabled">true</item>
         <item name="android:footerDividersEnabled">true</item>
+    </style>
+    <style name="titleBarStyle" parent="android:Theme">
+        <item name="android:windowTitleSize">50dp</item><!-- 原始标题栏的高度 -->
+        <item name="android:padding">0dp</item><!-- 使新的标题栏完全延伸到对齐到原始标题栏的两边 -->
     </style>
 </resources>

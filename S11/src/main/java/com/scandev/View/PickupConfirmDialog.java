@@ -23,6 +23,8 @@ public class PickupConfirmDialog extends Dialog{
     private TextView operatorView;
     private TextView laneView;
     private TextView arcView;
+    private TextView carstype;
+    private TextView carnumber;
     private TextView scanedView;
     private TextView notScanedView;
     private TextView excessView;
@@ -91,7 +93,9 @@ public class PickupConfirmDialog extends Dialog{
         dialogTitle = (TextView) mView.findViewById(R.id.dialogTitle);
         operatorView = (TextView)mView.findViewById(R.id.operator);
         laneView = (TextView)mView.findViewById(R.id.lane);
-        arcView = (TextView)mView.findViewById(R.id.arc);
+   //     arcView = (TextView)mView.findViewById(R.id.arc);
+        carstype = (TextView)mView.findViewById(R.id.carstype);
+        carnumber = (TextView)mView.findViewById(R.id.carnumber);
         totalNumView = (TextView)mView.findViewById(R.id.totalnum);
         supposedScanView = (TextView)mView.findViewById(R.id.supposednum);
         scanedView = (TextView)mView.findViewById(R.id.scaned);
@@ -111,7 +115,9 @@ public class PickupConfirmDialog extends Dialog{
         dialogTitle.setText(R.string.pickupconfirmtitle);
         operatorView.setText(datas.get("carriername"));
         laneView.setText(datas.get("lanename"));
-        arcView.setText(datas.get("arcname"));
+    //    arcView.setText(datas.get("arcname"));
+        carstype.setText("车型 ：4.2M(12)");
+        carnumber.setText("车牌 ：京Q54213");
         totalNumView.setText(datas.get("listtotalnum"));
         supposedScanView.setText(datas.get("supposedscannum"));
         scanedView.setText(datas.get("scanednum"));

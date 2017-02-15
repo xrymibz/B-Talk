@@ -146,7 +146,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/operatore_bg"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="@string/upload"
         android:textSize="30dp"
         android:onClick="confirmOrUpload"
@@ -159,7 +159,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:background="@color/operatore_bg"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
 
         android:text="@string/positive"
         android:textSize="30dp"

@@ -96,5 +96,8 @@
     <string name="dummy_button">返回</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+    <drawable name="clr_normal">#30a8dd</drawable>
+    <drawable name="clr_pressed">#309bdd</drawable>
+
     <string name="Localhost">https://aits.cn-north-1.eb.amazonaws.com.cn/</string>
 </resources>

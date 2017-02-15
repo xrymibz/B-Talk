@@ -236,6 +236,10 @@
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\src\\main\\res\\drawable\\selector_button_system.xml"
     },
     {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable\\login_button_selector.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\drawable\\login_button_selector.xml"
+    },
+    {
         "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
