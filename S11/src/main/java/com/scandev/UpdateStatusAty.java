@@ -104,7 +104,7 @@ public class UpdateStatusAty extends Activity {
         task10.execute(vbaId);
     }
 
-    //判断过往状态中是否包含某一特定状态
+    //?ж?????????????????????
     private boolean containStatus(String result, String statusCheck) {
         result = result.substring(1, result.length() - 1);
         result = result.replace("\"", "");
@@ -125,7 +125,7 @@ public class UpdateStatusAty extends Activity {
 
             params += reason + ',' + statuscode + ',';
             params += weightView.getText().toString() + ',' + cubeView.getText().toString() + ',';
-            //日期待定,因为可能涉及没网情况的处理
+            //???????,????????漰???????????
             params += "time no";
             task8 = new CheckStatusTask();
             task8.execute();
@@ -166,9 +166,9 @@ public class UpdateStatusAty extends Activity {
 
                 HttpResponse mHttpResponse = httppostClienttest.execute(httppost);
 
-                // 获得响应的消息实体
+                // ??????????????
                 HttpEntity mHttpEntity = mHttpResponse.getEntity();
-                // 获取一个输入流
+                // ????????????
                 inputStream = mHttpEntity.getContent();
                 BufferedReader bufferedReader = new BufferedReader(
                         new InputStreamReader(inputStream));
@@ -183,14 +183,14 @@ public class UpdateStatusAty extends Activity {
             } catch (ConnectTimeoutException e1) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e1.printStackTrace();
             } catch (SocketTimeoutException e2) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e2.printStackTrace();
@@ -214,9 +214,9 @@ public class UpdateStatusAty extends Activity {
             Log.i(TAG, "CurrentStatusTask onPostExecute() called");
             String data = "";
             int ListNum = 0;
-            //取消工作线程
+            //??????????
             if (task10 != null && task10.getStatus() == AsyncTask.Status.RUNNING) {
-                task10 = null; // 如果Task还在运行，则先取消它
+                task10 = null; // ???Task???????У??????????
             }
 
             if (result.contains("signin") || result.equals("")) {
@@ -234,13 +234,13 @@ public class UpdateStatusAty extends Activity {
                     }
                     ListNum = Integer.parseInt(dataJsonobj.getString("recordsFiltered"));
                 } catch (JSONException e) {
-                    System.out.println("mobilelist返回结果——JSON解析出错");
+                    System.out.println("mobilelist??????????JSON????????");
                     e.printStackTrace();
                 }
 
                 if (ListNum > 0) {
                     String strlist[] = data.split("\",\"|\\],\\[");
-                    //获取当前状态
+                    //????????
                     currentStatus = strlist[10];
                 }
             }
@@ -254,7 +254,7 @@ public class UpdateStatusAty extends Activity {
         @Override
         protected String doInBackground(String... arg0) {
             // TODO Auto-generated method stub
-            //获得以前的状态
+            //??????????
             Log.i(TAG, "EverStatusTask doInBackground() called");
             InputStream inputStream = null;
             String statusresult = "";
@@ -277,19 +277,19 @@ public class UpdateStatusAty extends Activity {
                 while (null != (line = bufferedReadertest.readLine())) {
                     statusresult += line;
                 }
-                System.out.println("状态列表：" + statusresult);
+                System.out.println("???б?" + statusresult);
                 httppost.abort();
             } catch (ConnectTimeoutException e1) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e1.printStackTrace();
             } catch (SocketTimeoutException e2) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e2.printStackTrace();
@@ -311,9 +311,9 @@ public class UpdateStatusAty extends Activity {
         @Override
         protected void onPostExecute(String result) {
             Log.i(TAG, "EverStatusTask onPostExecute() called");
-            //取消工作线程
+            //??????????
             if (task7 != null && task7.getStatus() == AsyncTask.Status.RUNNING) {
-                task7 = null; // 如果Task还在运行，则先取消它
+                task7 = null; // ???Task???????У??????????
             }
 
             if (result.contains("signin") || result.equals("")) {
@@ -341,53 +341,53 @@ public class UpdateStatusAty extends Activity {
                 backButton = (Button) findViewById(R.id.back);
                 backButton.setOnClickListener(backClickListener);
 
-                //构造状态选择下拉列表项
+                //??????????????б???
                 statusMap = new HashMap<String, Integer>();
-                statusMap.put("请选择", -1);//对应statusList首个字符串
-                statusMap.put("已派车", 3);
-                statusMap.put("已提货", 5);
-                statusMap.put("第一次中转入库", 6);
-                statusMap.put("第一次中转出库", 7);
-                statusMap.put("第一次库外交接", 8);
-                statusMap.put("第二次中转入库", 9);
-                statusMap.put("第二次中转出库", 10);
-                statusMap.put("第二次库外交接", 11);
-                statusMap.put("到达目的库房", 12);
+                statusMap.put("?????", -1);//???statusList????????
+                statusMap.put("?????", 3);
+                statusMap.put("?????", 5);
+                statusMap.put("???????????", 6);
+                statusMap.put("????????????", 7);
+                statusMap.put("????ο?????", 8);
+                statusMap.put("???????????", 9);
+                statusMap.put("????????????", 10);
+                statusMap.put("????ο?????", 11);
+                statusMap.put("????????", 12);
                 statusMap.put("Canceled", 16);
 
-                String[] items = new String[]{"已提货", "第一次中转入库", "第一次中转出库", "第一次库外交接",
-                        "第二次中转入库", "第二次中转出库", "第二次库外交接", "到达目的库房", "Canceled"};
+                String[] items = new String[]{"?????", "???????????", "????????????", "????ο?????",
+                        "???????????", "????????????", "????ο?????", "????????", "Canceled"};
                 System.out.println("currentStatus" + currentStatus);
                 int n = statusMap.get(currentStatus);
-                System.out.println("当前状态为：" + n);
+                System.out.println("????????" + n);
                 if (containStatus(result, "12")) {
 
                 }
-                //空字符串作为默认值
-                statusList.add("请选择");
+                //??????????????
+                statusList.add("?????");
                 if (n == 3) {
-                    //当前为"已派车"，下一状态只有"已提货"
+                    //????"?????"??????????"?????"
                     statusList.add(items[0]);
                 } else if (n == 5) {
-                    //已提货之后，可进行第一次中转入库or第一次库外交接or直接到达目的库房
+                    //???????????е??????????or????ο?????or??????????
                     statusList.add(items[1]);
                     statusList.add(items[3]);
                     statusList.add(items[7]);
                 } else if (n == 6 || n == 9) {
-                    //中转入库之后，只能中转出库
+                    //???????????????????
                     statusList.add(items[n - 4]);
                 } else if (n == 7) {
-                    //第一次中转出库之后，第二次中转or第一次库外交接or第二次库外交接or到达目的库房
-                    statusList.add(items[4]);//第二次中转入库
-                    if (!containStatus(result, "11")) {//如果没有进行第二次库外交接，
-                        if (containStatus(result, "8")) {//则判断是否进行了第一次库外交接
+                    //??????????????????????or????ο?????or????ο?????or????????
+                    statusList.add(items[4]);//???????????
+                    if (!containStatus(result, "11")) {//?????н??е???ο??????
+                        if (containStatus(result, "8")) {//???ж????????????ο?????
                             statusList.add(items[6]);
                         } else {
                             statusList.add(items[3]);
                         }
                     }
                     statusList.add(items[7]);
-                } else if (n == 8) {//第一次库外交接之后，第二次交接or第一次中转or第二次中转or到达目的库房
+                } else if (n == 8) {//????ο???????????ν???or????????or????????or????????
                     statusList.add(items[6]);
                     if (!containStatus(result, "9")) {
                         if (containStatus(result, "6")) {
@@ -397,7 +397,7 @@ public class UpdateStatusAty extends Activity {
                         }
                     }
                     statusList.add(items[7]);
-                } else if (n == 10) {//第二次中转之后，第一次库外交接or第二次库外交接or到达目的库房
+                } else if (n == 10) {//??????????????ο?????or????ο?????or????????
                     if (!containStatus(result, "11")) {
                         if (containStatus(result, "8")) {
                             statusList.add(items[6]);
@@ -406,7 +406,7 @@ public class UpdateStatusAty extends Activity {
                         }
                     }
                     statusList.add(items[7]);
-                } else if (n == 11) {//第二次库外交接之后，第一次中转or第二次中转or到达目的库房
+                } else if (n == 11) {//????ο???????????????or????????or????????
                     if (!containStatus(result, "9")) {
                         if (containStatus(result, "6")) {
                             statusList.add(items[4]);
@@ -417,39 +417,39 @@ public class UpdateStatusAty extends Activity {
                     statusList.add(items[7]);
                 }
 
-                if (n < 12) {//加入Canceled
+                if (n < 12) {//????Canceled
                     statusList.add(items[8]);
                 }
 
 
                 statusSpinner = (Spinner) findViewById(R.id.newstatus);
 
-                // 第二步：为下拉列表定义一个适配器，这里就用到里前面定义的list。
+                // ?????????????б??????????????????????????涨???list??
                 statusAdapter = new ArrayAdapter<String>(UpdateStatusAty.this,
                         android.R.layout.simple_spinner_item, statusList);
-                // 第三步：为适配器设置下拉列表下拉时的菜单样式。
+                // ????????????????????????б???????????????
                 statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                // 第四步：将适配器添加到下拉列表上
+                // ????????????????????????б???
                 statusSpinner.setAdapter(statusAdapter);
-                // 第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
+                // ???岽????????б??????????????????????????????????
                 statusSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
                     public void onItemSelected(AdapterView<?> arg0, View arg1,
                                                int arg2, long arg3) {
                         // TODO Auto-generated method stub
 
                         statuscode = statusMap.get(statusAdapter.getItem(arg2));
-                                /* 将statusSpinner 显示 */
+                                /* ??statusSpinner ??? */
                         arg0.setVisibility(View.VISIBLE);
 
                         if (statuscode == -1) {
-                            //未选择状态时按钮为disabled
+                            //δ??????????disabled
                             finalsaveButton.setEnabled(false);
                         } else if (statuscode == 6 || statuscode == 7 ||
                                 statuscode == 9 || statuscode == 10) {
-                            //状态是“第一次/第二次中转出入”(6\7\9\10),不保存，提示
+                            //??????????/????????????(6\7\9\10),?????棬???
                             Toast t = new Toast(UpdateStatusAty.this);
                             t = Toast.makeText(getApplicationContext(),
-                                    "该状态无法在手机端保存，请联系中转区", Toast.LENGTH_SHORT);
+                                    "????????????????棬??????????", Toast.LENGTH_SHORT);
                             t.setGravity(Gravity.CENTER, 0, 0);
                             t.show();
                             finalsaveButton.setEnabled(false);
@@ -470,7 +470,7 @@ public class UpdateStatusAty extends Activity {
                         arg0.setVisibility(View.VISIBLE);
                     }
                 });
-    			/* 下拉菜单弹出的内容选项触屏事件处理 */
+    			/* ????????????????????????????? */
                 statusSpinner.setOnTouchListener(new Spinner.OnTouchListener() {
                     public boolean onTouch(View v, MotionEvent event) {
                         // TODO Auto-generated method stub
@@ -482,32 +482,32 @@ public class UpdateStatusAty extends Activity {
                 });
 
     			/*
-    			 * 取消原因
+    			 * ??????
     			 */
-                cancelList.add("(1)到达后15分钟内找不到有效联系人");
-                cancelList.add("(2)实际地址与计划安排地址不符");
-                cancelList.add("(3)无发货标签，或发货标签无PO或者目的库信息");
-                cancelList.add("(4)包装不符合运输要求，或包装破损");
-                cancelList.add("(5)供应商未备货，或者等待备货时间超过30分钟");
-                cancelList.add("(6)遇供应商休息，不发货");
-                cancelList.add("(7)体积或重量超出预计安排，导致车辆无法装下");
-                cancelList.add("(8)酒类货物无随附单");
-                cancelList.add("(9)亚马逊要求取消提货");
-                cancelList.add("(10)该PO货物之前已经完成提货");
-                cancelList.add("(11)同一天出现多张一样的提货单，该单作废");
-                cancelList.add("(12)车辆已满载，无法完成该单提货");
-                cancelList.add("(13)时间来不及，无法在要求时间内到达供应商处提货");
-                cancelList.add("(14)在计划要求日期内遗漏安排车辆进行提货");
+                cancelList.add("(1)?????15?????????????Ч?????");
+                cancelList.add("(2)???????????????????");
+                cancelList.add("(3)??????????????????PO???????????");
+                cancelList.add("(4)???????????????????????");
+                cancelList.add("(5)?????δ?????????????????????30????");
+                cancelList.add("(6)??????????????????");
+                cancelList.add("(7)?????????????????????????????????");
+                cancelList.add("(8)??????????渽??");
+                cancelList.add("(9)??????????????");
+                cancelList.add("(10)??PO???????????????");
+                cancelList.add("(11)?????????????????????????????");
+                cancelList.add("(12)??????????????????????");
+                cancelList.add("(13)??????????????????????????﹩???????");
+                cancelList.add("(14)??????????????????????????????");
 
                 cancelSpinner = (Spinner) findViewById(R.id.reason);
                 cancelAdapter = new ArrayAdapter<String>(UpdateStatusAty.this,
                         android.R.layout.simple_spinner_item, cancelList);
-                // 第三步：为适配器设置下拉列表下拉时的菜单样式。
+                // ????????????????????????б???????????????
                 //cancelAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 cancelAdapter.setDropDownViewResource(R.layout.dropdown_item);
-                // 第四步：将适配器添加到下拉列表上
+                // ????????????????????????б???
                 cancelSpinner.setAdapter(cancelAdapter);
-                // 第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
+                // ???岽????????б??????????????????????????????????
                 cancelSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
                     public void onItemSelected(AdapterView<?> arg0, View arg1,
                                                int arg2, long arg3) {
@@ -522,7 +522,7 @@ public class UpdateStatusAty extends Activity {
                         arg0.setVisibility(View.VISIBLE);
                     }
                 });
-    			/* 下拉菜单弹出的内容选项触屏事件处理 */
+    			/* ????????????????????????????? */
                 statusSpinner.setOnTouchListener(new Spinner.OnTouchListener() {
                     public boolean onTouch(View v, MotionEvent event) {
                         // TODO Auto-generated method stub
@@ -542,7 +542,7 @@ public class UpdateStatusAty extends Activity {
 
         protected void onPreExecute() {
             Log.i(TAG, "CheckStatusTask onPreExecute() called");
-            dialog = ProgressDialog.show(UpdateStatusAty.this, "", "正在保存");
+            dialog = ProgressDialog.show(UpdateStatusAty.this, "", "???????");
         }
 
         @Override
@@ -570,19 +570,19 @@ public class UpdateStatusAty extends Activity {
                 while (null != (line = bufferedReadertest.readLine())) {
                     statusresult += line;
                 }
-                System.out.println("状态列表：" + statusresult);
+                System.out.println("???б?" + statusresult);
                 httppost.abort();
             } catch (ConnectTimeoutException e1) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e1.printStackTrace();
             } catch (SocketTimeoutException e2) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e2.printStackTrace();
@@ -604,13 +604,13 @@ public class UpdateStatusAty extends Activity {
         @Override
         protected void onPostExecute(String result) {
             Log.i(TAG, "CheckStatusTask onPostExecute() called");
-            //关闭dialog
+            //???dialog
             if (dialog != null) {
                 dialog.dismiss();
             }
 
             if (task8 != null && task8.getStatus() == AsyncTask.Status.RUNNING) {
-                task8 = null; // 如果Task还在运行，则先取消它
+                task8 = null; // ???Task???????У??????????
             }
 
             if (result.contains("signin") || result.equals("")) {
@@ -623,7 +623,7 @@ public class UpdateStatusAty extends Activity {
                 if (containStatus(result, statusSelected)) {
                     Toast t = new Toast(UpdateStatusAty.this);
                     t = Toast.makeText(getApplicationContext(),
-                            "该状态已保存，请返回", Toast.LENGTH_LONG);
+                            "????????棬????", Toast.LENGTH_LONG);
                     t.setGravity(Gravity.CENTER, 0, 0);
                     t.show();
                     finalsaveButton.setEnabled(false);
@@ -644,7 +644,7 @@ public class UpdateStatusAty extends Activity {
             InputStream inputStream = null;
             String result = "";
             try {
-                //添加状态
+                //?????
                 HttpClient hc = CustomHttpClient.getHttpClient();
                 HttpPost httppost = new HttpPost(LocalHost
                         + "asnOperationRecord/mobileadd");
@@ -656,9 +656,9 @@ public class UpdateStatusAty extends Activity {
                 HttpResponse mHttpResponse = hc.execute(httppost);
                 int statustest = mHttpResponse.getStatusLine().getStatusCode();
                 System.out.println("status:" + statustest);
-                // 获得响应的消息实体
+                // ??????????????
                 HttpEntity mHttpEntity = mHttpResponse.getEntity();
-                // 获取一个输入流
+                // ????????????
                 inputStream = mHttpEntity.getContent();
                 BufferedReader bufferedReader = new BufferedReader(
                         new InputStreamReader(inputStream));
@@ -672,14 +672,14 @@ public class UpdateStatusAty extends Activity {
             } catch (ConnectTimeoutException e1) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e1.printStackTrace();
             } catch (SocketTimeoutException e2) {
                 Toast t = new Toast(UpdateStatusAty.this);
                 t = Toast.makeText(getApplicationContext(),
-                        "您当前的网络状况不佳，请稍后重试", Toast.LENGTH_LONG);
+                        "????????????????????????????", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.CENTER, 0, 0);
                 t.show();
                 e2.printStackTrace();
@@ -694,9 +694,9 @@ public class UpdateStatusAty extends Activity {
         @Override
         protected void onPostExecute(String result) {
             Log.i(TAG, "UpdateTask onPostExecute() called");
-            //取消工作线程
+            //??????????
             if (task4 != null && task4.getStatus() == AsyncTask.Status.RUNNING) {
-                task4 = null; // 如果Task还在运行，则先取消它
+                task4 = null; // ???Task???????У??????????
             }
             if (result.contains("signin")) {
                 Intent toLogin = new Intent();
@@ -708,7 +708,7 @@ public class UpdateStatusAty extends Activity {
 
                 Toast toast = new Toast(UpdateStatusAty.this);
                 toast = Toast.makeText(getApplicationContext(),
-                        "保存成功", Toast.LENGTH_LONG);
+                        "??????", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 finalsaveButton.setEnabled(false);
@@ -719,7 +719,7 @@ public class UpdateStatusAty extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        //屏蔽返回键
+        //???η????
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             return true;
         }

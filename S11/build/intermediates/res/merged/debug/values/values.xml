@@ -366,6 +366,7 @@
     <string name="suretozeorclear">是否将此次计数清零?</string>
     <string name="time_error">时间选择有误</string>
     <string name="title_activity_arc">请选择Arc</string>
+    <string name="title_activity_carnumber">请输入车牌</string>
     <string name="title_activity_carstype">请选择车型</string>
     <string name="title_activity_exception_edit">编辑异常</string>
     <string name="title_activity_exceptioncheck">异常查看</string>

@@ -19,7 +19,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class HistoryActivity extends ActionBarActivity {
+public class HistoryActivity extends BaseTitleAcitvity {
+    private String title = "¿˙ ∑≤È—Ø";
     private String TAG = "HistoryActivity";
     private EditText dateText = null;
 
@@ -38,13 +39,16 @@ public class HistoryActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated METHOD_LOGIN stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_history);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  //      setContentView(R.layout.activity_history);
+ //       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         dateText = (EditText) findViewById(R.id.dateChoose);
         historylist = (ListView) findViewById(R.id.historylist);
         totalText = (TextView) findViewById(R.id.total);
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
+
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         userId = login_user.getInt("userId", -1);
         laneE = login_user.getString("laneE", "");
 
@@ -68,6 +72,11 @@ public class HistoryActivity extends ActionBarActivity {
 
         task = new GetScanHistoryTask(this);
         task.execute(dataMap);
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_history;
     }
 
     public void chooseDate(View v) {

@@ -1,5 +1,7 @@
 package com.scandev;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,21 +19,30 @@ import java.util.Map;
  * Created by xietian on 2017/2/13.
  */
 
-public class CarNumberActivity extends ActionBarActivity {
+public class CarNumberActivity extends BaseTitleAcitvity {
 
+    private String title = "请输入车牌号";
     private ListView listView = null;
+    SharedPreferences login_user;
     MySimpleAdapter adapter = null;
     List<Map<String, Object>> carstypelist = null;
     private static final int COMPLETED = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 给左上角图标的左边加上一个返回的图标
-        setContentView(R.layout.activity_carnumber);
-
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 给左上角图标的左边加上一个返回的图标
+//        setContentView(R.layout.activity_carnumber);
+        login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
 
         new Thread(getArc).start();
 
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_carnumber;
     }
 
     Handler handler = new Handler() {

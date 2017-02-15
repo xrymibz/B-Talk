@@ -452,6 +452,10 @@
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_base.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_base.xml"
+    },
+    {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
     },

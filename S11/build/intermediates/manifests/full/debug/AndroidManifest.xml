@@ -34,8 +34,7 @@
             android:name="com.scandev.HomeActivity"
             android:label="@string/title_activity_home"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/titleBarStyle" />
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.scandev.CarsTypeActivity"
             android:label="@string/title_activity_carstype"
@@ -43,7 +42,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.scandev.CarNumberActivity"
-            android:label="@string/title_activity_carstype"
+            android:label="@string/title_activity_carnumber"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
@@ -93,7 +92,7 @@
             android:name="com.scandev.FullscreenPicActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen_pic"
-            android:theme="@style/titleBarStyle" >
+            android:theme="@style/FullscreenTheme" >
         </activity>
         <activity
             android:name="com.scandev.ScanOrManualAty"

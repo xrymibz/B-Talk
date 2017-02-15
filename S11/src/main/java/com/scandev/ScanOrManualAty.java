@@ -37,8 +37,8 @@ public class ScanOrManualAty extends Activity {
             }
         });
 
-        //判断设备型号，决定“扫描枪”按钮是否可用
-        //PDA设备的型号是“Glory50”
+        //?ж??豸?????????????????????????
+        //PDA?豸????????Glory50??
         if (!Build.MODEL.equals("Glory50")) {
             mButton.setEnabled(false);
         }
@@ -71,21 +71,21 @@ public class ScanOrManualAty extends Activity {
     }
 
     /**
-     * listen back_key：监听返回键
+     * listen back_key???????????
      */
     @SuppressWarnings("deprecation")
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // 创建退出对话框  
+            // ????????????  
             AlertDialog isExit = new AlertDialog.Builder(this).create();
-            // 设置对话框标题  
-            isExit.setTitle("系统提示");
-            // 设置对话框消息  
-            isExit.setMessage("确定要返回吗");
-            // 添加选择按钮并注册监听  
-            isExit.setButton("确定", listener);
-            isExit.setButton2("取消", listener);
-            // 显示对话框  
+            // ???????????  
+            isExit.setTitle("?????");
+            // ???????????  
+            isExit.setMessage("??????????");
+            // ???????????????  
+            isExit.setButton("???", listener);
+            isExit.setButton2("???", listener);
+            // ????????  
             isExit.show();
         }
 
@@ -93,13 +93,13 @@ public class ScanOrManualAty extends Activity {
     }
 
     /**
-     * 监听对话框里面的button点击事件
+     * ??????????????button??????
      */
 
     DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
             switch (which) {
-                case AlertDialog.BUTTON_POSITIVE:// "确认"按钮退出程序
+                case AlertDialog.BUTTON_POSITIVE:// "???"??????????
 
                     //finish();
                     System.exit(0);
@@ -110,7 +110,7 @@ public class ScanOrManualAty extends Activity {
 
                     break;
 
-                case AlertDialog.BUTTON_NEGATIVE:// "取消"第二个按钮取消对话框
+                case AlertDialog.BUTTON_NEGATIVE:// "???"????????????????
 
                     break;
 
@@ -130,9 +130,9 @@ public class ScanOrManualAty extends Activity {
             case SCANNIN_GREQUEST_CODE:
                 if (resultCode == RESULT_OK) {
                     Bundle bundle = data.getExtras();
-                    //显示扫描到的内容
+                    //?????赽??????
                     mTextView.setText(bundle.getString("result"));
-                    //显示
+                    //???
                     //	mImageView.setImageBitmap((Bitmap) data.getParcelableExtra("bitmap"));
                 }
                 break;

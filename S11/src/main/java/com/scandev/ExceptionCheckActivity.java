@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -23,10 +24,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class ExceptionCheckActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class ExceptionCheckActivity extends BaseTitleAcitvity implements AdapterView.OnItemClickListener {
 
     private ListView listView;
-
+    private String title = "异常查看";
+    SharedPreferences login_user;
     private boolean clean;
     private Set<Integer> array_selected;
     private ArrayList<ExceptionItem> dataList;
@@ -35,10 +37,13 @@ public class ExceptionCheckActivity extends ActionBarActivity implements Adapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         clean = true;
-        setContentView(R.layout.activity_exception_check);
+//        setContentView(R.layout.activity_exception_check);
         listView = (ListView) findViewById(R.id.exceptlist);
         array_selected = new HashSet<>();
 
@@ -48,6 +53,11 @@ public class ExceptionCheckActivity extends ActionBarActivity implements Adapter
         ExceptionCheckAdapter adapter = new ExceptionCheckAdapter(this, dataList, array_selected);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_exception_check;
     }
 
     public void delete(View v) {

@@ -66,9 +66,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExceptionEditActivity extends ActionBarActivity
+public class ExceptionEditActivity extends BaseTitleAcitvity
         implements BarcodeReader.BarcodeListener, BarcodeReader.TriggerListener, LinearLayoutView.KeyBoardStateListener {
     public final static String TAG = "ExceptionEditActivity";
+    private String title = "“Ï≥£±‡º≠";
     private SharedPreferences login_user;
     private TextView laneName;
     private TextView arcName;
@@ -102,8 +103,8 @@ public class ExceptionEditActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exception_edit);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+ //       setContentView(R.layout.activity_exception_edit);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         laneName = (TextView) findViewById(R.id.laneForExcept);
         arcName = (TextView) findViewById(R.id.arcForExcept);
@@ -119,6 +120,9 @@ public class ExceptionEditActivity extends ActionBarActivity
         mannualInput = (LinearLayout) findViewById(R.id.code_mannual_input);
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
+
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         datas = new HashMap<>();
         DataLoad.uploadData(this, login_user, datas);
 
@@ -210,6 +214,11 @@ public class ExceptionEditActivity extends ActionBarActivity
         });
     }
 
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_exception_edit;
+    }
+
     private void initView(ExceptionItem item) {
         mannualInput.setVisibility(View.GONE);
         exceptionMessage.setText(item.getDescription());
@@ -230,7 +239,7 @@ public class ExceptionEditActivity extends ActionBarActivity
                 break;
         }
         exceptionType.setSelection(index);
-        //ÊÅ¢Â§çÂºÇÂ∏∏ÂõæÁâá
+        //ª÷∏¥“Ï≥£Õº∆¨
         String[] urls = item.getImgUris();
 
         for (String s : urls) {
@@ -540,7 +549,7 @@ public class ExceptionEditActivity extends ActionBarActivity
                 imgPathList.add(picPathTemp);
                 pa.notifyDataSetChanged();
             } else {
-                Toast.makeText(ExceptionEditActivity.this, "Ëé∑ÂèñÁÖßÁâáÂ§±Ë¥•", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ExceptionEditActivity.this, "ªÒ»°’’∆¨ ß∞‹", Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -30,8 +30,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExceptionQueryActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class ExceptionQueryActivity extends BaseTitleAcitvity implements AdapterView.OnItemClickListener {
 
+    private String title = "“Ï≥£≤È—Ø";
     private TextView laneName;
     private TextView arcName;
     private Button startDateButton;
@@ -65,8 +66,8 @@ public class ExceptionQueryActivity extends ActionBarActivity implements Adapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exception_query);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+ //       setContentView(R.layout.activity_exception_query);
+ //       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         laneName = (TextView) findViewById(R.id.laneName);
         arcName = (TextView) findViewById(R.id.arcName);
@@ -77,6 +78,8 @@ public class ExceptionQueryActivity extends ActionBarActivity implements Adapter
         listView = (ListView) findViewById(R.id.resultList);
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         DataLoad.uploadData(this, login_user, datas);
 
         laneName.setText(datas.get("lanename"));
@@ -93,6 +96,11 @@ public class ExceptionQueryActivity extends ActionBarActivity implements Adapter
         endTimeButton.setText(endTime);
 
         listView.setOnItemClickListener(this);
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_exception_query;
     }
 
     public void changeStartDate(View v) {

@@ -30,12 +30,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/titleBarStyle"
         />
         <activity
             android:name=".CarsTypeActivity"
@@ -44,7 +46,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".CarNumberActivity"
-            android:label="@string/title_activity_carstype"
+            android:label="@string/title_activity_carnumber"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
@@ -94,8 +96,7 @@
             android:name=".FullscreenPicActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen_pic"
-            android:theme="@style/titleBarStyle">
-
+            android:theme="@style/FullscreenTheme">
         </activity>
 
         <activity

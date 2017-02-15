@@ -53,12 +53,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HomeActivity extends Activity {
+public class HomeActivity extends BaseTitleAcitvity {
 
-    private static TextView TitleName = null;
-    private static TextView CarrierName = null;
-    private static Button ComeBack = null;
+
     private static final String TAG = "LanesActivity";
+    private String title = "请选择路线";
     private final OkHttpClient client = new OkHttpClient();
     private static String carrier = "";
     private static String isInjection = "";
@@ -103,30 +102,26 @@ public class HomeActivity extends Activity {
 
 
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
-        setContentView(R.layout.activity_home);
-        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.activity_title);
-        TitleName = (TextView) findViewById(R.id.titlename);
-        CarrierName = (TextView) findViewById(R.id.carriername);
-        ComeBack = (Button)findViewById(R.id.comeback);
-        TitleName.setText("请选择路线 ");
-        CarrierName.setText("上海展欣");
 
-
-
-
-  //      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         String username = login_user.getString("username", "");
         carrier = login_user.getString("carrierAbbr", "");
         isInjection = login_user.getString("isInjection", "");
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         try {
             new Thread(getLanes).start();
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_home;//任意非空布局
     }
 
     protected void showResultList(JSONObject res) {

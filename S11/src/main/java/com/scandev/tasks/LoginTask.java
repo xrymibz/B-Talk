@@ -214,7 +214,6 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
                 editor.putString("isInjection", isInjection);
                 editor.putString("carrierName", carrierName);
                 editor.commit();
-
                 Intent intent = new Intent();
                 intent.setClass(activity, HomeActivity.class);
  //               intent.setClass(activity, CarNumberActivity.class);

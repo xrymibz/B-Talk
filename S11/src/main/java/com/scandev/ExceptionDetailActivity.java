@@ -1,12 +1,15 @@
 package com.scandev;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -19,8 +22,11 @@ import com.scandev.utils.DensityUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExceptionDetailActivity extends ActionBarActivity {
+public class ExceptionDetailActivity extends BaseTitleAcitvity {
 
+
+    private String title = "异常详情";
+    SharedPreferences login_user;
     private TextView barCodeView;
     private TextView timeView;
     private TextView typeView;
@@ -34,9 +40,11 @@ public class ExceptionDetailActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exception_detail);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+ //       setContentView(R.layout.activity_exception_detail);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         ImageLoaderConfiguration configuration = ImageLoaderConfiguration
                 .createDefault(this);
 
@@ -72,6 +80,11 @@ public class ExceptionDetailActivity extends ActionBarActivity {
         typeView.setText(msg[2]);
         descriptionView.setText(msg[3]);
 
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_exception_detail;
     }
 
     public void back(View v) {

@@ -50,9 +50,10 @@ import android.view.View;
 /*** honeywell *******************************/
 import static com.honeywell.aidc.BarcodeReader.TRIGGER_CONTROL_MODE_CLIENT_CONTROL;
 
-public class ScanActivity extends ActionBarActivity
+public class ScanActivity extends BaseTitleAcitvity
         implements BarcodeReader.BarcodeListener, BarcodeReader.TriggerListener {
     public final static String TAG = "ScanActivity";
+    private String title = "¿ªÊ¼É¨Ãè";
     //VIEW
     public EditText editTextMessage;
     public Button pickupButton;
@@ -96,12 +97,14 @@ public class ScanActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  //      setContentView(R.layout.activity_scan);
+  //      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         nowArc = login_user.getString("arcType", null) + login_user.getInt("arcId", 0);
  //       System.out.println("login_user.getString(\"arcType\", null) "+ login_user.getString("arcType", null));
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
 
         if (nowArc == null) {//!!!!!!!!!!!!!!!!!!!!!!!
             Log.e(TAG, "nowArc aquire fail");
@@ -146,6 +149,11 @@ public class ScanActivity extends ActionBarActivity
             barcodeReader.addTriggerListener(this);
         }
 
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_scan;
     }
 
     private void addBox(String barcodeData) {

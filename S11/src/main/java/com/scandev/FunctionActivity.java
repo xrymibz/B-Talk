@@ -1,5 +1,7 @@
 package com.scandev;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Debug;
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
@@ -7,25 +9,33 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 
-public class FunctionActivity extends ActionBarActivity {
+public class FunctionActivity extends BaseTitleAcitvity {
+    private String title = "功能选择";
     private int laneId;
     private String arcType;
     private String TAG = "FunctionActivity";
-
+    SharedPreferences login_user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated METHOD_LOGIN stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_functions);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
 
+        setTitle(title);
+        setRtTitle(login_user.getString("carrierName",""));
         Intent intent = getIntent();
 
         laneId = Integer.parseInt(intent.getStringExtra("laneId"));
         arcType = intent.getStringExtra("arcType");
 
         System.out.println("landid : " + laneId + "arcType : "+ arcType);
+    }
+
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_functions;//任意非空布局
     }
 
     public void beginScan(View v) {
@@ -90,4 +100,6 @@ public class FunctionActivity extends ActionBarActivity {
                 return true;
         }
     }
+
+
 }
