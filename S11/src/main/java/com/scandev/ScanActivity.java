@@ -52,6 +52,10 @@ import static com.honeywell.aidc.BarcodeReader.TRIGGER_CONTROL_MODE_CLIENT_CONTR
 
 public class ScanActivity extends BaseTitleAcitvity
         implements BarcodeReader.BarcodeListener, BarcodeReader.TriggerListener {
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_scan;
+    }
     public final static String TAG = "ScanActivity";
     private String title = "¿ªÊ¼É¨Ãè";
     //VIEW
@@ -151,10 +155,7 @@ public class ScanActivity extends BaseTitleAcitvity
 
     }
 
-    @Override
-    protected int getContentView() {
-        return R.layout.activity_scan;
-    }
+
 
     private void addBox(String barcodeData) {
         String boxCode = Parser.validateBoxCode(barcodeData);

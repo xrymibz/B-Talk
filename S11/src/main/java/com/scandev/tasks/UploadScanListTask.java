@@ -145,6 +145,8 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
         String sourceFC = datas.get("sourceFC");
         String destinationFC = datas.get("destinationFC");
         String arcType = datas.get("arctype");
+        String carType = datas.get("carType");
+        String carNumber = datas.get("carNumber");
         String time = Constant.formateDate(new Date());
 
         taskId = arcType.substring(0, 1) + sourceFC + destinationFC + sdf2.format(new Date());
@@ -158,6 +160,8 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
         taskInfo.put("laneE", laneE);
         taskInfo.put("laneName", laneName);
         taskInfo.put("carrierAbbr", carrierAbbr);
+        taskInfo.put("carType", carType);
+        taskInfo.put("carNumber", carNumber);
 
       /*  String time = "2016-06-27 19:30:00";
         String sourceFC = "SHA2";

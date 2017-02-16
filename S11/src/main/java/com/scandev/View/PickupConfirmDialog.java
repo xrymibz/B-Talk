@@ -1,7 +1,9 @@
 package com.scandev.View;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +43,8 @@ public class PickupConfirmDialog extends Dialog{
     private View.OnClickListener negativeListener;
     private View.OnClickListener createExceptionListener;
     private View.OnClickListener reviewExceptionListener;
+
+    SharedPreferences login_user;
 
     private ScanActivity activity;
 
@@ -94,7 +98,7 @@ public class PickupConfirmDialog extends Dialog{
         operatorView = (TextView)mView.findViewById(R.id.operator);
         laneView = (TextView)mView.findViewById(R.id.lane);
    //     arcView = (TextView)mView.findViewById(R.id.arc);
-        carstype = (TextView)mView.findViewById(R.id.carstype);
+        carstype = (TextView)mView.findViewById(R.id.cartype);
         carnumber = (TextView)mView.findViewById(R.id.carnumber);
         totalNumView = (TextView)mView.findViewById(R.id.totalnum);
         supposedScanView = (TextView)mView.findViewById(R.id.supposednum);
@@ -112,12 +116,14 @@ public class PickupConfirmDialog extends Dialog{
 
 
     public void setMessage(Map<String,String> datas){
+
+
         dialogTitle.setText(R.string.pickupconfirmtitle);
         operatorView.setText(datas.get("carriername"));
         laneView.setText(datas.get("lanename"));
     //    arcView.setText(datas.get("arcname"));
-        carstype.setText("车型 ：4.2M(12)");
-        carnumber.setText("车牌 ：京Q54213");
+        carstype.setText("车型 ： "+datas.get("carType"));
+        carnumber.setText("车牌 ： "+datas.get("carNumber"));
         totalNumView.setText(datas.get("listtotalnum"));
         supposedScanView.setText(datas.get("supposedscannum"));
         scanedView.setText(datas.get("scanednum"));

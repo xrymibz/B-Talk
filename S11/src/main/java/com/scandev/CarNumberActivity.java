@@ -1,14 +1,22 @@
 package com.scandev;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.scandev.utils.MySimpleAdapter;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,7 +30,10 @@ import java.util.Map;
 public class CarNumberActivity extends BaseTitleAcitvity {
 
     private String title = "请输入车牌号";
+    private String carType = "";
+    private TextView carnumberType = null;
     private ListView listView = null;
+    private EditText carNumberEdit = null;
     SharedPreferences login_user;
     MySimpleAdapter adapter = null;
     List<Map<String, Object>> carstypelist = null;
@@ -30,12 +41,15 @@ public class CarNumberActivity extends BaseTitleAcitvity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        carNumberEdit = (EditText)findViewById(R.id.carnumberedit);
+        carnumberType = (TextView)findViewById(R.id.carnumberType);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 给左上角图标的左边加上一个返回的图标
 //        setContentView(R.layout.activity_carnumber);
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
-
+        carType = login_user.getString("carType","");
+        carnumberType.setText(carType);
         new Thread(getArc).start();
 
     }
@@ -90,7 +104,36 @@ public class CarNumberActivity extends BaseTitleAcitvity {
 
 
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+            @Override
+            public void onItemClick(AdapterView<?> parent, View arg1, int pos,
+                                    long id) {
+
+                try {
+                    Map<String, Object> temp = new HashMap<>();
+                    temp = carstypelist.get(pos);
+                    String selectedCarNumber = (String)temp.get("carNumberInfo");
+                    carNumberEdit.setText(selectedCarNumber);
+                } catch (Exception e) {
+
+                    e.printStackTrace();
+                }
+            }
+
+        });
+    }
+    public void nextStep(View view){
+
+        SharedPreferences.Editor editor = login_user.edit();
+        editor.putString("carNumber", carNumberEdit.getText().toString());
+        editor.commit();
+        System.out.println("You've choosed :" +  carNumberEdit.getText().toString());
+//                    System.out.println(login_user.getString("arcType", null));
+        Intent intent = new Intent();
+        intent.putExtra("carNumber", carNumberEdit.getText().toString() + "");
+        intent.setClass(CarNumberActivity.this, ScanActivity.class);
+        startActivity(intent);
 
     }
 }

@@ -226,14 +226,14 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
                     adapter.notifyDataSetChanged();
                     cartype = (JSONObject) (cartypes.get(pos));
                     SharedPreferences.Editor editor = login_user.edit();
-                    String carName = (String) cartype.get("carName");
-                    editor.putString("carName", carName);
+                    String carType = (String) cartype.get("cartype");
+                    editor.putString("carType", carType);
                     editor.commit();
-                    System.out.println("You've choosed :" + cartype.get("carName") +"   ");
+                    System.out.println("You've choosed :" + cartype.get("cartype") +"   ");
 //                    System.out.println(login_user.getString("arcType", null));
                     Intent intent = new Intent();
-                    intent.putExtra("carName", carName + "");
-                    intent.setClass(CarTypeActivity.this, FunctionActivity.class);
+                    intent.putExtra("carType", carType + "");
+                    intent.setClass(CarTypeActivity.this, CarNumberActivity.class);
                     startActivity(intent);
                 } catch (JSONException e) {
 
