@@ -583,9 +583,9 @@ int id carriercode 0x7f0d00a3
 int id carrierlist 0x7f0d0099
 int id carriername 0x7f0d00b6
 int id carstype 0x7f0d00e2
-int id carstypeItemText 0x7f0d00f6
-int id carstypelist 0x7f0d005a
 int id cartoncount 0x7f0d00f2
+int id cartypeItemText 0x7f0d00f6
+int id cartypelist 0x7f0d005a
 int id caseImage 0x7f0d0102
 int id check 0x7f0d00f9
 int id check_exphistory 0x7f0d0112
@@ -810,7 +810,7 @@ int layout abc_select_dialog_material 0x7f030018
 int layout activity_arc 0x7f030019
 int layout activity_base 0x7f03001a
 int layout activity_carnumber 0x7f03001b
-int layout activity_carstype 0x7f03001c
+int layout activity_cartype 0x7f03001c
 int layout activity_choose_vbaid 0x7f03001d
 int layout activity_detail 0x7f03001e
 int layout activity_detail_wait 0x7f03001f
@@ -841,7 +841,7 @@ int layout grid_photo_item 0x7f030037
 int layout item 0x7f030038
 int layout list_arc 0x7f030039
 int layout list_carnumber 0x7f03003a
-int layout list_carstype 0x7f03003b
+int layout list_cartype 0x7f03003b
 int layout list_excepiton_check 0x7f03003c
 int layout list_exception 0x7f03003d
 int layout list_history 0x7f03003e

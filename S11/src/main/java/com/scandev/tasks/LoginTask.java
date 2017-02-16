@@ -11,7 +11,6 @@ import android.view.Gravity;
 import android.widget.Toast;
 
 import com.scandev.CarNumberActivity;
-import com.scandev.CarsTypeActivity;
 import com.scandev.CustomHttpClient;
 import com.scandev.HomeActivity;
 import com.scandev.MainActivity;

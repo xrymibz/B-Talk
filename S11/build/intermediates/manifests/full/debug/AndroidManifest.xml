@@ -36,7 +36,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.scandev.CarsTypeActivity"
+            android:name="com.scandev.CarTypeActivity"
             android:label="@string/title_activity_carstype"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />

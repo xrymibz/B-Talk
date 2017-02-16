@@ -103,7 +103,7 @@ ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:36:9
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:39:13-44
 	android:name
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:37:13-41
-activity#com.scandev.CarsTypeActivity
+activity#com.scandev.CarTypeActivity
 ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:42:9-46:52
 	android:screenOrientation
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:46:13-49
@@ -112,7 +112,7 @@ ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:42:9
 	android:launchMode
 		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:45:13-44
 	android:name
-		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:43:13-45
+		ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:43:13-44
 activity#com.scandev.CarNumberActivity
 ADDED from C:\Users\xietian\Desktop\B-Talk\S11\src\main\AndroidManifest.xml:47:9-51:52
 	android:screenOrientation

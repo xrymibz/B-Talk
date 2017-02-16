@@ -45,8 +45,10 @@ public class FunctionActivity extends BaseTitleAcitvity {
         intent.putExtra("functionCode", 0);
 
         if(arcType.equals("Injection")){
-            intent.setClass(FunctionActivity.this,  ScanActivity.class);
+            //Injection,跳转到车型选择界面
+            intent.setClass(FunctionActivity.this,  CarTypeActivity.class);
         }else{
+            //非Injection，跳转到arc选择界面
             intent.setClass(FunctionActivity.this, ArcActivity.class);
         }
 

@@ -22,7 +22,7 @@
 	        android:layout_width="fill_parent"
 	        android:background="@drawable/lineback"/> -->
     <ListView
-        android:id="@+id/carstypelist"
+        android:id="@+id/cartypelist"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         />

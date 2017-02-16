@@ -4,6 +4,10 @@
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\list_exception.xml"
     },
     {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cartype.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_cartype.xml"
+    },
+    {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
@@ -62,10 +66,6 @@
     {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
-        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_carstype.xml",
-        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\activity_carstype.xml"
     },
     {
         "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
@@ -416,10 +416,6 @@
         "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\list_carstype.xml",
-        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\list_carstype.xml"
-    },
-    {
         "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
@@ -450,6 +446,10 @@
     {
         "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\list_cartype.xml",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\layout\\list_cartype.xml"
     },
     {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\layout\\activity_base.xml",

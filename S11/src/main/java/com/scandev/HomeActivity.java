@@ -303,7 +303,5 @@ public class HomeActivity extends BaseTitleAcitvity {
         }
     }
 
-    public void comeback(View v) {
-        finish();
-    }
+
 }

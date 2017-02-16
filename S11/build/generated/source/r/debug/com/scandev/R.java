@@ -1754,9 +1754,9 @@ containing a value of this type.
         public static final int carrierlist=0x7f0d0099;
         public static final int carriername=0x7f0d00b6;
         public static final int carstype=0x7f0d00e2;
-        public static final int carstypeItemText=0x7f0d00f6;
-        public static final int carstypelist=0x7f0d005a;
         public static final int cartoncount=0x7f0d00f2;
+        public static final int cartypeItemText=0x7f0d00f6;
+        public static final int cartypelist=0x7f0d005a;
         public static final int caseImage=0x7f0d0102;
         public static final int check=0x7f0d00f9;
         public static final int check_exphistory=0x7f0d0112;
@@ -1985,7 +1985,7 @@ containing a value of this type.
         public static final int activity_arc=0x7f030019;
         public static final int activity_base=0x7f03001a;
         public static final int activity_carnumber=0x7f03001b;
-        public static final int activity_carstype=0x7f03001c;
+        public static final int activity_cartype=0x7f03001c;
         public static final int activity_choose_vbaid=0x7f03001d;
         public static final int activity_detail=0x7f03001e;
         public static final int activity_detail_wait=0x7f03001f;
@@ -2016,7 +2016,7 @@ containing a value of this type.
         public static final int item=0x7f030038;
         public static final int list_arc=0x7f030039;
         public static final int list_carnumber=0x7f03003a;
-        public static final int list_carstype=0x7f03003b;
+        public static final int list_cartype=0x7f03003b;
         public static final int list_excepiton_check=0x7f03003c;
         public static final int list_exception=0x7f03003d;
         public static final int list_history=0x7f03003e;

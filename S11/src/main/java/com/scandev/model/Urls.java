@@ -3,6 +3,7 @@ package com.scandev.model;
 public enum Urls{
     URL_LOGIN("scan/scanLogin"),
     URL_GETCHECKLIST( "interface/getCompareList"),
+    URL_GETCARTYPEByCARRIER("scan/getcartypeBycarier"),
     URL_GETLANESByCARRIER("scan/getLanesByCarrier"),
     URL_UPLOAD("interface/scanPickup"),
     URL_HISTORY("scan/getScanHistory"),
