@@ -116,7 +116,7 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
         public void run() {
             try{
                 RequestBody formBody = new FormEncodingBuilder()
-                        .add("carrierId", carrier)
+                        .add("carrierAbbr", carrier)
                         .build();
                 Request request = new Request.Builder()
                         .url(Urls.URL_GETCARTYPEByCARRIER.url())

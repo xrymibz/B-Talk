@@ -26,8 +26,12 @@ import java.util.Set;
 
 public class ExceptionCheckActivity extends BaseTitleAcitvity implements AdapterView.OnItemClickListener {
 
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_exception_check;
+    }
     private ListView listView;
-    private String title = "异常查看";
+    private String title = "�鿴�쳣";
     SharedPreferences login_user;
     private boolean clean;
     private Set<Integer> array_selected;
@@ -55,10 +59,7 @@ public class ExceptionCheckActivity extends BaseTitleAcitvity implements Adapter
         listView.setOnItemClickListener(this);
     }
 
-    @Override
-    protected int getContentView() {
-        return R.layout.activity_exception_check;
-    }
+
 
     public void delete(View v) {
         if (array_selected.size() > 0) {
