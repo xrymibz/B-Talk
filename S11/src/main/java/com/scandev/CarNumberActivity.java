@@ -49,41 +49,43 @@ public class CarNumberActivity extends BaseTitleAcitvity {
     protected int getContentView() {
         return R.layout.activity_carnumber;
     }
+    SharedPreferences login_user;
     private static final String TAG = "CarNumberActivity";
-    private String title = "请输入车牌号";
+    private final String title = "请输入车牌号";
     private final OkHttpClient client = new OkHttpClient();
     private String carType = "";
+    private String arcType = "";
+    private static String carrier = "";
     private TextView carnumberType = null;
     private ListView listView = null;
     private EditText carNumberEdit = null;
-    SharedPreferences login_user;
-    MySimpleAdapter adapter = null;
-    List<Map<String, Object>> carstypelist = null;
-    private static final int COMPLETED = 0;
-    private static final int COMFAILED = -2;
-    private static final int FAILED = -1;
-    private static String carrier = "";
     List<Map<String, Object>> carNumberlist = null;
     private JSONObject res = null;
     private JSONArray carNumbers = null;
+    MySimpleAdapter adapter = null;
+    List<Map<String, Object>> carstypelist = null;
+    private int laneId = 0;
+    private static final int COMPLETED = 0;
+    private static final int COMFAILED = -2;
+    private static final int FAILED = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         carNumberEdit = (EditText)findViewById(R.id.carnumberedit);
         carnumberType = (TextView)findViewById(R.id.carnumberType);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 给左上角图标的左边加上一个返回的图标
-//        setContentView(R.layout.activity_carnumber);
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         carrier = login_user.getString("carrierAbbr", "");
+        carType = login_user.getString("carType", "");
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
-        carType = login_user.getString("carType","");
+        Intent intent = getIntent();
+        laneId = Integer.parseInt(intent.getStringExtra("laneId"));
+        arcType = intent.getStringExtra("arcType");
         carnumberType.setText(carType);
         new Thread(getCarNumber).start();
 
     }
-
-
     Handler handler = new Handler() {
 
         @Override
@@ -94,8 +96,6 @@ public class CarNumberActivity extends BaseTitleAcitvity {
             }
         }
     };
-
-
     Runnable getCarNumber = new Runnable() {
 
         @Override
@@ -103,6 +103,7 @@ public class CarNumberActivity extends BaseTitleAcitvity {
             try{
                 RequestBody formBody = new FormEncodingBuilder()
                         .add("carrierAbbr", carrier)
+                        .add("carType",carType)
                         .build();
                 Request request = new Request.Builder()
                         .url(Urls.URL_GETCARNUMBERByCARRIER.url())
@@ -116,9 +117,7 @@ public class CarNumberActivity extends BaseTitleAcitvity {
                 sc.init(null, new TrustManager[]{new MyTrustManager()}, new SecureRandom());
                 client.setSslSocketFactory(sc.getSocketFactory());
                 client.setHostnameVerifier(new MyHostnameVerifier());
-
                 client.newCall(request).enqueue(new Callback() {
-
 
                     @Override
                     public void onResponse(Response response) throws IOException {
@@ -160,30 +159,12 @@ public class CarNumberActivity extends BaseTitleAcitvity {
             }catch (Exception e){
                 throw new RuntimeException(e);
             }
-
         }
         };
 
 
     public void showResult() {
         carstypelist = new ArrayList();
-
-
-
-
-
-//        ArrayList s = new ArrayList<String>();
-//
-//
-//        s.add("京Q33541");
-//        s.add("京Q54213");
-//        s.add("冀A66266");
-//        for(int i=0;i<s.size();i++){
-//            Map<String, Object> map = new HashMap<>();
-//            map.put("carNumberInfo",s.get(i));
-//            System.out.println(s.get(i));
-//            carstypelist.add(map);
-//        }
         listView = (ListView) findViewById(R.id.carnumberlist);
         adapter = new MySimpleAdapter(this, carNumberlist, R.layout.list_carnumber,
                 new String[]{"carNumberInfo"},
@@ -237,9 +218,13 @@ public class CarNumberActivity extends BaseTitleAcitvity {
         editor.commit();
         System.out.println("You've choosed :" +  carNumberEdit.getText().toString());
 //                    System.out.println(login_user.getString("arcType", null));
+
         Intent intent = new Intent();
+        intent.putExtra("laneId", laneId + "");
+        intent.putExtra("arcType", arcType + "");
         intent.putExtra("carNumber", carNumberEdit.getText().toString() + "");
-        intent.setClass(CarNumberActivity.this, ScanActivity.class);
+        intent.setClass(CarNumberActivity.this, FunctionActivity.class);
         startActivity(intent);
     }
+
 }

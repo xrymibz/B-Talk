@@ -73,7 +73,6 @@ public class ArcActivity extends BaseTitleAcitvity {
         functionCode = intent.getIntExtra("functionCode", 0);//need check the code?
 
         System.out.println("Selected lane is " + laneId);
-
         new Thread(getArc).start();
     }
 
@@ -195,7 +194,6 @@ public class ArcActivity extends BaseTitleAcitvity {
                     String destinationFC = arc.getString("destinationFC");
                     String sortCode = arc.getString("sortCode");
                     String arcType = arc.getString("arcType");
-
                     editor.putString("sourceFC", sourceFC);
                     editor.putString("destinationFC", destinationFC);
                     editor.putString("sortCode", sortCode);
@@ -205,26 +203,29 @@ public class ArcActivity extends BaseTitleAcitvity {
                     editor.commit();
 
                     Intent intent = new Intent();
+                    intent.putExtra("laneId", laneId + "");
+                    intent.putExtra("arcType", arcType + "");
                     intent.putExtra("arcIdentify", arcId + arcType);
-                    switch (functionCode) {
-                        case 0:
-                            if (arcType.equals("AITS")) {
-//                                System.out.println("AITS page!");
-                                intent.setClass(ArcActivity.this, ScanOrManualAty.class);
-                            } else {
-                                intent.setClass(ArcActivity.this, ScanActivity.class);
-                            }
-                            break;
-                        case 1:
-                            intent.setClass(ArcActivity.this, ExceptionEditActivity.class);
-                            intent.putExtra("fluency", -1);
-                            break;
-                        case 2:
-                            intent.setClass(ArcActivity.this, ExceptionQueryActivity.class);
-                            break;
-                        default:
-                            break;
-                    }
+//                    switch (functionCode) {
+//                        case 0:
+//                            if (arcType.equals("AITS")) {
+////                                System.out.println("AITS page!");
+//                                intent.setClass(ArcActivity.this, ScanOrManualAty.class);
+//                            } else {
+//                                intent.setClass(ArcActivity.this, ScanActivity.class);
+//                            }
+//                            break;
+//                        case 1:
+//                            intent.setClass(ArcActivity.this, ExceptionEditActivity.class);
+//                            intent.putExtra("fluency", -1);
+//                            break;
+//                        case 2:
+//                            intent.setClass(ArcActivity.this, ExceptionQueryActivity.class);
+//                            break;
+//                        default:
+//                            break;
+//                    }
+                    intent.setClass(ArcActivity.this, FunctionActivity.class);
                     startActivity(intent);
                 } catch (JSONException e) {
                     e.printStackTrace();

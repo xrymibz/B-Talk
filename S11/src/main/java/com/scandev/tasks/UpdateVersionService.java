@@ -59,8 +59,8 @@ public class UpdateVersionService {
             while ((line = reader.readLine()) != null) {
                 sb.append(line);
             }
-            System.out.println(sb.toString());
-            System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+//            System.out.println(sb.toString());
+//            System.out.println("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

@@ -107,6 +107,8 @@ public class ScanActivity extends BaseTitleAcitvity
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         nowArc = login_user.getString("arcType", null) + login_user.getInt("arcId", 0);
  //       System.out.println("login_user.getString(\"arcType\", null) "+ login_user.getString("arcType", null));
+
+
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
 
@@ -119,7 +121,6 @@ public class ScanActivity extends BaseTitleAcitvity
         subNumEditText = (EditText) findViewById(R.id.num);
         scanList = (ListView) findViewById(R.id.scans);
         operator = (LinearLayout) findViewById(R.id.operator);
-
         if (!nowArc.equals(prevArc)) {
             currentScanItemList = new ArrayList<>();
             scanRecordList = new HashMap<>();
@@ -159,8 +160,8 @@ public class ScanActivity extends BaseTitleAcitvity
 
     private void addBox(String barcodeData) {
         String boxCode = Parser.validateBoxCode(barcodeData);
-        //识别条码,
-        // 如果通过识别,将箱号发送
+        //???????,
+        // ?????????,????????
         if (boxCode != null) {
             Intent intent = new Intent();
             intent.putExtra("boxCode", boxCode);
@@ -185,7 +186,7 @@ public class ScanActivity extends BaseTitleAcitvity
         System.out.println(notCheckedList.contains(scanResult)+"   arctype :   "+uploadData.get("arctype")) ;
         if (!notCheckedList.contains(scanResult)) {
             if (!Parser.validateBarCode(scanResult, uploadData.get("arctype"), uploadData.get("sourceFC"))) {
-                //给出错货报警音,弹出TOAST提示
+                //?????????????,????TOAST???
                 S11Application.playSound(3, 1);
                 Toast toast = Toast.makeText(getApplicationContext(),
                         R.string.barcode_error, Toast.LENGTH_SHORT);
@@ -225,12 +226,12 @@ public class ScanActivity extends BaseTitleAcitvity
 
     private void checkBox(String barCode) {
         if (uploadData.get("arctype").equals("VReturn")) {
-            //弹出对话框,接收扫描事件,通过确认按钮来调用回调函数
+            //?????????,??????????,????????????????????
             CaseScanDialog csDialog = new CaseScanDialog(this, barCode);
             seeBox = true;
             csDialog.show();
         } else {
-            //直接调用回调函数
+            //????????????
             callBackRecord(barCode);
         }
         //callBackRecord(barCode);
@@ -261,7 +262,7 @@ public class ScanActivity extends BaseTitleAcitvity
         scanNums++;
         adapter.array = currentScanItemList;
         adapter.notifyDataSetChanged();
-        seeBox = false;//将扫描枪的识别状态置回
+        seeBox = false;//????????????????
         pickupButton.setText(getString(R.string.upload) + "(" + scanNums + ")");
     }
 

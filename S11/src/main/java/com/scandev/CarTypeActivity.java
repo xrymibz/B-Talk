@@ -45,29 +45,35 @@ import javax.net.ssl.TrustManager;
 
 public class CarTypeActivity  extends BaseTitleAcitvity {
 
-    private static final String TAG = "CarTypeActivity";
-    private String title = "ÇëÑ¡Ôñ³µÐÍ";
-    private final OkHttpClient client = new OkHttpClient();
+    @Override
+    protected int getContentView() {return R.layout.activity_cartype;}
     SharedPreferences login_user;
+    private static final String TAG = "CarTypeActivity";
+    private final String title = "ÇëÑ¡Ôñ³µÐÍ";
+    private static String carrier = "";
+    private String arcType = "";
+    private final OkHttpClient client = new OkHttpClient();
     private static final int COMPLETED = 0;
     private static final int COMFAILED = -2;
     private static final int FAILED = -1;
-    private static String carrier = "";
+    private int laneId = 0;
     private ListView listView = null;
     MySimpleAdapter adapter = null;
     private JSONObject res = null;
     private JSONArray cartypes = null;
     List<Map<String, Object>> cartypelist = null;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);// ç»™å·¦ä¸Šè§’å›¾æ ‡çš„å·¦è¾¹åŠ ä¸Šä¸€ä¸ªè¿”å›žçš„å›¾æ ‡
-
-
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         carrier = login_user.getString("carrierAbbr", "");
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
+        Intent intent = getIntent();
+        laneId = Integer.parseInt(intent.getStringExtra("laneId"));
+        arcType = intent.getStringExtra("arcType");
         try {
             new Thread(getCarType).start();
         } catch (Exception e) {
@@ -77,10 +83,7 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
 
     }
 
-    @Override
-    protected int getContentView() {
-        return R.layout.activity_cartype;
-    }
+
 
     private Handler handler = new Handler() {
         @Override
@@ -109,7 +112,6 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
         }
     };
 
-
     Runnable getCarType = new Runnable() {
 
         @Override
@@ -130,10 +132,7 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
                 sc.init(null, new TrustManager[]{new MyTrustManager()}, new SecureRandom());
                 client.setSslSocketFactory(sc.getSocketFactory());
                 client.setHostnameVerifier(new MyHostnameVerifier());
-
                 client.newCall(request).enqueue(new Callback() {
-
-
                     @Override
                     public void onResponse(Response response) throws IOException {
                         if (response.isSuccessful()) {
@@ -178,33 +177,6 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
         }
         };
 
-
-//    public void showResult() {
-//        cartypelist = new ArrayList();
-//        ArrayList s = new ArrayList<String>();
-//        s.add("4.2M(12)");
-//        s.add("5.2M(18)");
-//        s.add("6.8M(30)");
-//        s.add("Jinbei(2.7)");
-//        s.add("IVECO(5)");
-//        s.add("4.7M(28)");
-//        s.add("CHANGAN(4.7)");
-//        s.add("EVIKE(7)");
-//        for(int i=0;i<s.size();i++){
-//            Map<String, Object> map = new HashMap<>();
-//            map.put("carstypeInfo",s.get(i));
-//            System.out.println(s.get(i));
-//            cartypelist.add(map);
-//        }
-//        listView = (ListView) findViewById(R.id.cartypelist);
-//        adapter = new MySimpleAdapter(this, cartypelist, R.layout.list_cartype,
-//                new String[]{"carstypeInfo"},
-//                new int[]{R.id.cartypeItemText});
-//
-//
-//
-//        listView.setAdapter(adapter);
-//    }
     protected void showResultList(JSONObject res) {
 
         listView = (ListView) findViewById(R.id.cartypelist);
@@ -233,6 +205,8 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
 //                    System.out.println(login_user.getString("arcType", null));
                     Intent intent = new Intent();
                     intent.putExtra("carType", carType + "");
+                    intent.putExtra("laneId", laneId + "");
+                    intent.putExtra("arcType", arcType + "");
                     intent.setClass(CarTypeActivity.this, CarNumberActivity.class);
                     startActivity(intent);
                 } catch (JSONException e) {
@@ -246,7 +220,6 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
 
     private void getData(JSONObject res) {
         cartypelist = new ArrayList<Map<String, Object>>();
-
         try {
             cartypes = res.getJSONArray("data");
             for (int i = 0; i < cartypes.length(); i++) {

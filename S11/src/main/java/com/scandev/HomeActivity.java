@@ -155,7 +155,14 @@ public class HomeActivity extends BaseTitleAcitvity {
                     Intent intent = new Intent();
                     intent.putExtra("laneId", laneId + "");
                     intent.putExtra("arcType", arcType + "");
-                    intent.setClass(HomeActivity.this, FunctionActivity.class);
+
+                    if(arcType.equals("Injection")){
+                        //Injection,跳转到车型选择界面
+                        intent.setClass(HomeActivity.this,  CarTypeActivity.class);
+                    }else{
+                        //非Injection，跳转到arc选择界面
+                        intent.setClass(HomeActivity.this, ArcActivity.class);
+                    }
                     startActivity(intent);
                 } catch (JSONException e) {
 

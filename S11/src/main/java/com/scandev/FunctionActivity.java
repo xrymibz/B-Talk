@@ -26,7 +26,6 @@ public class FunctionActivity extends BaseTitleAcitvity {
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
         Intent intent = getIntent();
-
         laneId = Integer.parseInt(intent.getStringExtra("laneId"));
         arcType = intent.getStringExtra("arcType");
 
@@ -43,14 +42,12 @@ public class FunctionActivity extends BaseTitleAcitvity {
         Intent intent = new Intent();
         intent.putExtra("laneId", laneId + "");
         intent.putExtra("functionCode", 0);
-
-        if(arcType.equals("Injection")){
-            //Injection,跳转到车型选择界面
-            intent.setClass(FunctionActivity.this,  CarTypeActivity.class);
-        }else{
-            //非Injection，跳转到arc选择界面
-            intent.setClass(FunctionActivity.this, ArcActivity.class);
-        }
+        if (arcType.equals("AITS")) {
+//                                System.out.println("AITS page!");
+        intent.setClass(FunctionActivity.this, ScanOrManualAty.class);
+         } else {
+          intent.setClass(FunctionActivity.this, ScanActivity.class);
+         }
 
         startActivity(intent);
     }
@@ -68,12 +65,9 @@ public class FunctionActivity extends BaseTitleAcitvity {
         Intent intent = new Intent();
         intent.putExtra("laneId", laneId + "");
         intent.putExtra("functionCode", 1);
-        if(arcType.equals("Injection")){
+
             intent.setClass(FunctionActivity.this, ExceptionEditActivity.class);
-            intent.putExtra("fluency", -1);
-        }else{
-            intent.setClass(FunctionActivity.this, ArcActivity.class);
-        }
+
 
 
         startActivity(intent);
@@ -84,11 +78,9 @@ public class FunctionActivity extends BaseTitleAcitvity {
         Intent intent = new Intent();
         intent.putExtra("laneId", laneId + "");
         intent.putExtra("functionCode", 2);
-        if(arcType.equals("Injection")){
+
             intent.setClass(FunctionActivity.this, ExceptionQueryActivity.class);
-        }else{
-            intent.setClass(FunctionActivity.this, ArcActivity.class);
-        }
+
         startActivity(intent);
     }
 

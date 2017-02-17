@@ -60,7 +60,9 @@
 		android:layout_alignParentRight="true"
 		android:layout_alignParentEnd="true"
 		android:layout_marginEnd="12dp"
-		android:onClick="nextStep"/>
+		android:onClick="nextStep"
+		android:background="@drawable/selector_button_system"
+		android:textColor="#ffffff"/>
 
 
 </RelativeLayout>

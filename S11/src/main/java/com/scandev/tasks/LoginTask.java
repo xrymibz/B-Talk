@@ -203,15 +203,16 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
                 int userId = Integer.parseInt(arr.get(0).toString());
                 String carrierAbbr = arr.get(1).toString();
                 String isInjection = arr.get(2).toString();
-
                 System.out.println("userId:" + userId  +"carrierAbbr :"+carrierAbbr);
-
                 editor.putString("carrierAbbr", carrierAbbr);
                 editor.putString("username", userName);
                 editor.putString("pwd", passWord);
                 editor.putInt("userId", userId);
                 editor.putString("isInjection", isInjection);
                 editor.putString("carrierName", carrierName);
+                editor.putString("carType", "");
+                editor.putString("carNumber", "");
+
                 editor.commit();
                 Intent intent = new Intent();
                 intent.setClass(activity, HomeActivity.class);
