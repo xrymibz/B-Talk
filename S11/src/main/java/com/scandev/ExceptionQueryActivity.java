@@ -32,6 +32,10 @@ import java.util.Map;
 
 public class ExceptionQueryActivity extends BaseTitleAcitvity implements AdapterView.OnItemClickListener {
 
+    @Override
+    protected int getContentView() {
+        return R.layout.activity_exception_query;
+    }
     private String title = "“Ï≥£≤È—Ø";
     private TextView laneName;
     private TextView arcName;
@@ -98,10 +102,7 @@ public class ExceptionQueryActivity extends BaseTitleAcitvity implements Adapter
         listView.setOnItemClickListener(this);
     }
 
-    @Override
-    protected int getContentView() {
-        return R.layout.activity_exception_query;
-    }
+
 
     public void changeStartDate(View v) {
         DatePickerDialog datepicker = new DatePickerDialog(ExceptionQueryActivity.this,

@@ -89,7 +89,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void checkUpdate() {
-        Toast.makeText(MainActivity.this, "正在检查版本更新..", Toast.LENGTH_SHORT).show();
+  //      Toast.makeText(MainActivity.this, "正在检查版本更新..", Toast.LENGTH_SHORT).show();
         // 自动检查有没有新版本 如果有新版本就提示更新
         new Thread() {
             public void run() {
@@ -110,7 +110,7 @@ public class MainActivity extends ActionBarActivity {
             if (updateVersionService.isNeedUpdate()) {
                 showUpdateDialog();
             } else {
-               Toast.makeText(MainActivity.this, "已是最新版本" + info.getVersion(), Toast.LENGTH_SHORT).show();
+  //             Toast.makeText(MainActivity.this, "已是最新版本" + info.getVersion(), Toast.LENGTH_SHORT).show();
             }
         }
     };

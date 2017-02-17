@@ -68,8 +68,11 @@ import java.util.Map;
 
 public class ExceptionEditActivity extends BaseTitleAcitvity
         implements BarcodeReader.BarcodeListener, BarcodeReader.TriggerListener, LinearLayoutView.KeyBoardStateListener {
+
+    @Override
+    protected int getContentView() {return R.layout.activity_exception_edit;}
     public final static String TAG = "ExceptionEditActivity";
-    private String title = "“Ï≥£±‡º≠";
+    private final String title = "“Ï≥£±‡º≠";
     private SharedPreferences login_user;
     private TextView laneName;
     private TextView arcName;
@@ -214,10 +217,7 @@ public class ExceptionEditActivity extends BaseTitleAcitvity
         });
     }
 
-    @Override
-    protected int getContentView() {
-        return R.layout.activity_exception_edit;
-    }
+
 
     private void initView(ExceptionItem item) {
         mannualInput.setVisibility(View.GONE);

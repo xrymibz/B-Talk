@@ -51,7 +51,7 @@ public class FullscreenImageView extends ImageView {
         mOriginalHeight = height;
         mOriginalLocationX = locationX;
         mOriginalLocationY = locationY;
-        // 因为是屏幕坐标，所以要转换为该视图内的坐标，因为我所用的该视图是MATCH_PARENT，所以不用定位该视图的位置,如果不是的话，还需要定位视图的位置，然后计算mOriginalLocationX和mOriginalLocationY
+        // ?????????????????????????????????????????????????MATCH_PARENT??????????λ???????λ??,??????????????????λ?????λ?????????mOriginalLocationX??mOriginalLocationY
         mOriginalLocationY = mOriginalLocationY - getStatusBarHeight(getContext());
     }
 
@@ -87,12 +87,12 @@ public class FullscreenImageView extends ImageView {
     }
 
     private class Transfrom {
-        float startScale;// 图片开始的缩放值
-        float endScale;// 图片结束的缩放值
-        float scale;// 属性ValueAnimator计算出来的值
-        LocationSizeF startRect;// 开始的区域
-        LocationSizeF endRect;// 结束的区域
-        LocationSizeF rect;// 属性ValueAnimator计算出来的值
+        float startScale;// ????????????
+        float endScale;// ?????????????
+        float scale;// ????ValueAnimator??????????
+        LocationSizeF startRect;// ?????????
+        LocationSizeF endRect;// ??????????
+        LocationSizeF rect;// ????ValueAnimator??????????
 
         void initStartIn() {
             scale = startScale;
@@ -121,7 +121,6 @@ public class FullscreenImageView extends ImageView {
         if (mBitmap == null || mBitmap.isRecycled()) {
             mBitmap = ((BitmapDrawable) getDrawable()).getBitmap();
         }
-        //防止mTransfrom重复的做同样的初始化
         if (mTransfrom != null) {
             return;
         }
@@ -130,34 +129,26 @@ public class FullscreenImageView extends ImageView {
         }
         mTransfrom = new Transfrom();
 
-        /** 下面为缩放的计算 */
-        /* 计算初始的缩放值，初始值因为是CENTR_CROP效果，所以要保证图片的宽和高至少1个能匹配原始的宽和高，另1个大于 */
+
         float xSScale = mOriginalWidth / ((float) mBitmap.getWidth());
         float ySScale = mOriginalHeight / ((float) mBitmap.getHeight());
         float startScale = xSScale > ySScale ? xSScale : ySScale;
         mTransfrom.startScale = startScale;
-        /* 计算结束时候的缩放值，结束值因为要达到FIT_CENTER效果，所以要保证图片的宽和高至少1个能匹配原始的宽和高，另1个小于 */
         float xEScale = getWidth() / ((float) mBitmap.getWidth());
         float yEScale = getHeight() / ((float) mBitmap.getHeight());
         float endScale = xEScale < yEScale ? xEScale : yEScale;
         mTransfrom.endScale = endScale;
 
-        /**
-         * 下面计算Canvas Clip的范围，也就是图片的显示的范围，因为图片是慢慢变大，并且是等比例的，所以这个效果还需要裁减图片显示的区域
-         * ，而显示区域的变化范围是在原始CENTER_CROP效果的范围区域
-         * ，到最终的FIT_CENTER的范围之间的，区域我用LocationSizeF更好计算
-         * ，他就包括左上顶点坐标，和宽高，最后转为Canvas裁减的Rect.
-         */
-        /* 开始区域 */
+
         mTransfrom.startRect = new LocationSizeF();
         mTransfrom.startRect.left = mOriginalLocationX;
         mTransfrom.startRect.top = mOriginalLocationY;
         mTransfrom.startRect.width = mOriginalWidth;
         mTransfrom.startRect.height = mOriginalHeight;
-        /* 结束区域 */
+        /* ???????? */
         mTransfrom.endRect = new LocationSizeF();
-        float bitmapEndWidth = mBitmap.getWidth() * mTransfrom.endScale;// 图片最终的宽度
-        float bitmapEndHeight = mBitmap.getHeight() * mTransfrom.endScale;// 图片最终的宽度
+        float bitmapEndWidth = mBitmap.getWidth() * mTransfrom.endScale;// ?????????
+        float bitmapEndHeight = mBitmap.getHeight() * mTransfrom.endScale;// ?????????
         mTransfrom.endRect.left = (getWidth() - bitmapEndWidth) / 2;
         mTransfrom.endRect.top = (getHeight() - bitmapEndHeight) / 2;
         mTransfrom.endRect.width = bitmapEndWidth;
@@ -220,7 +211,7 @@ public class FullscreenImageView extends ImageView {
 
             int saveCount = canvas.getSaveCount();
             canvas.save();
-            // 先得到图片在此刻的图像Matrix矩阵
+            // ??????????????Matrix????
             getBmpMatrix();
             canvas.translate(mTransfrom.rect.left, mTransfrom.rect.top);
             canvas.clipRect(0, 0, mTransfrom.rect.width, mTransfrom.rect.height);
@@ -232,7 +223,7 @@ public class FullscreenImageView extends ImageView {
                 startTransform(mState);
             }
         } else {
-            //当Transform In变化完成后，把背景改为黑色，使得Activity不透明
+            //??Transform In?仯???????????????????Activity?????
             mPaint.setAlpha(255);
             canvas.drawPaint(mPaint);
             super.onDraw(canvas);
@@ -249,7 +240,7 @@ public class FullscreenImageView extends ImageView {
         if (mBitmap == null || mBitmap.isRecycled()) {
             mBitmap = ((BitmapDrawable) getDrawable()).getBitmap();
         }
-        /* 下面实现了CENTER_CROP的功能 */
+        /* ?????????CENTER_CROP????? */
         mSmoothMatrix.setScale(mTransfrom.scale, mTransfrom.scale);
         mSmoothMatrix.postTranslate(-(mTransfrom.scale * mBitmap.getWidth() / 2 - mTransfrom.rect.width / 2),
                 -(mTransfrom.scale * mBitmap.getHeight() / 2 - mTransfrom.rect.height / 2));
@@ -307,10 +298,10 @@ public class FullscreenImageView extends ImageView {
             @Override
             public void onAnimationEnd(Animator animation) {
                 /*
-                 * 如果是进入的话，当然是希望最后停留在center_crop的区域。但是如果是out的话，就不应该是center_crop的位置了
-                 * ， 而应该是最后变化的位置，因为当out的时候结束时，不回复视图是Normal，要不然会有一个突然闪动回去的bug
+                 * ????????????????????????????center_crop??????????????out?????????????center_crop??λ????
+                 * ?? ??????????仯??λ????????out?????????????????????Normal????????????????????????bug
                  */
-                // TODO 这个可以根据实际需求来修改
+                // TODO ??????????????????????
                 if (state == STATE_TRANSFORM_IN) {
                     mState = STATE_NORMAL;
                 }

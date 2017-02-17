@@ -24,8 +24,9 @@ import java.util.List;
 
 public class ExceptionDetailActivity extends BaseTitleAcitvity {
 
-
-    private String title = "å¼‚å¸¸è¯¦æƒ…";
+    @Override
+    protected int getContentView() {return R.layout.activity_exception_detail;}
+    private String title = "Òì³£ÏêÇé";
     SharedPreferences login_user;
     private TextView barCodeView;
     private TextView timeView;
@@ -82,10 +83,7 @@ public class ExceptionDetailActivity extends BaseTitleAcitvity {
 
     }
 
-    @Override
-    protected int getContentView() {
-        return R.layout.activity_exception_detail;
-    }
+
 
     public void back(View v) {
         ExceptionDetailActivity.this.finish();
