@@ -62,12 +62,12 @@ public class ArcActivity extends BaseTitleAcitvity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-  //      getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 给左上角图标的左边加上一个返回的图标
-  //      setContentView(R.layout.activity_arc);
+        //      getSupportActionBar().setDisplayHomeAsUpEnabled(true);// 给左上角图标的左边加上一个返回的图标
+        //      setContentView(R.layout.activity_arc);
 
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         setTitle(title);
-        setRtTitle(login_user.getString("carrierName",""));
+        setRtTitle(login_user.getString("carrierName", ""));
         Intent intent = getIntent();
         laneId = Integer.parseInt(intent.getStringExtra("laneId"));
         functionCode = intent.getIntExtra("functionCode", 0);//need check the code?
