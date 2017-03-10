@@ -71,6 +71,7 @@ public class UploadExceptionTask extends AsyncTask<ExceptionItem, Integer, Integ
             try {
                 JSONObject taskInfo = new JSONObject();
                 GenerateUploadData(eeActivity, taskInfo, eeActivity.datas);
+                Log.d("taskInfo",taskInfo.toString());
                 scanContent.put("taskInfo", taskInfo);
                 params[0].put("taskId",taskInfo.get("taskId"));
             } catch (JSONException e) {
@@ -156,6 +157,8 @@ public class UploadExceptionTask extends AsyncTask<ExceptionItem, Integer, Integ
         String source = datas.get("sourceFC");
         String destination = datas.get("destinationFC");
         String cargoType = datas.get("arctype");
+        String carNumber = datas.get("carNumber");
+        String carType = datas.get("carType");
         String time = Constant.formateDate(new Date());
 
         String taskId = cargoType.substring(0, 1) + source + destination + sdf2.format(new Date());
@@ -169,6 +172,8 @@ public class UploadExceptionTask extends AsyncTask<ExceptionItem, Integer, Integ
         jb.put("laneE", laneE);
         jb.put("laneName", laneName);
         jb.put("carrierAbbr", carrierAbbr);
+        jb.put("carNumber",carNumber);
+        jb.put("carType",carType);
 
         /*JSONObject obj = new JSONObject();
         obj.put("scanId", activity.exception.getBarCode());

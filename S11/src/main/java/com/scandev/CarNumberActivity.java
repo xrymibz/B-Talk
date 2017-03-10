@@ -1,6 +1,8 @@
 package com.scandev;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -213,18 +215,52 @@ public class CarNumberActivity extends BaseTitleAcitvity {
 
     public void nextStep(View view){
 
-        SharedPreferences.Editor editor = login_user.edit();
-        editor.putString("carNumber", carNumberEdit.getText().toString());
-        editor.commit();
-        System.out.println("You've choosed :" +  carNumberEdit.getText().toString());
+        String carNumber = carNumberEdit.getText().toString();
+        if(!checkCarNumber(carNumber)){
+            new AlertDialog.Builder(CarNumberActivity.this).setTitle("系统提示")//设置对话框标题
+
+                    .setMessage("输入的车牌号格式有误，请重新输入！")//设置显示的内容
+
+                    .setNegativeButton("确定",new DialogInterface.OnClickListener() {//添加返回按钮
+
+
+
+                @Override
+
+                public void onClick(DialogInterface dialog, int which) {//响应事件
+
+                    // TODO Auto-generated method stub
+
+                    Log.i("alertdialog"," 请保存数据！");
+
+                }
+
+            }).show();//在按键响应事件中显示此对话框
+        }else{
+            SharedPreferences.Editor editor = login_user.edit();
+            editor.putString("carNumber", carNumber);
+            editor.commit();
+            System.out.println("You've choosed :" +  carNumberEdit.getText().toString());
 //                    System.out.println(login_user.getString("arcType", null));
 
-        Intent intent = new Intent();
-        intent.putExtra("laneId", laneId + "");
-        intent.putExtra("arcType", arcType + "");
-        intent.putExtra("carNumber", carNumberEdit.getText().toString() + "");
-        intent.setClass(CarNumberActivity.this, FunctionActivity.class);
-        startActivity(intent);
+            Intent intent = new Intent();
+            intent.putExtra("laneId", laneId + "");
+            intent.putExtra("arcType", arcType + "");
+            intent.putExtra("carNumber", carNumberEdit.getText().toString() + "");
+            intent.setClass(CarNumberActivity.this, FunctionActivity.class);
+            startActivity(intent);
+        }
     }
-
+//验证车牌号码是否合法
+    public boolean checkCarNumber(String carNumber){
+        if(carNumber==null || carNumber.length()==0)
+            return true;
+        int len = carNumber.length();
+        if(len>8) return false;
+        char []s = carNumber.toCharArray();
+        for(char i : s){
+            if(i==' ') return false;
+        }
+        return true;
+    }
 }
