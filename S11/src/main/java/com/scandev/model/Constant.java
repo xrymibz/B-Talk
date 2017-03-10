@@ -24,10 +24,13 @@ public class Constant {
     public static final String METHOD_EXCEPTION_HISTORY = "getExceptionHistory";
     public static final String METHOD_UPLOAD_EXCEPTION = "uploadExceptionInfo";
 
-    private static String laneConfigServer = "https://54.223.193.245:8443/laneconfig/";
+    //private static String laneConfigServer = "https://54.223.193.245:8443/laneconfig/";
     //private static String laneConfigServer = "http://9801a78c0ccf.ant.amazon.com:8080/";
+    private static String laneConfigServer = "http://10.66.110.92:8080/laneconfig/";
     public static final String URL_GETLANE = laneConfigServer + "getLanesByCarrier";
     public static final String URL_GETARC = laneConfigServer + "getArcsByLane";
+   // public static final String URL_GETCARNUMBERBYCARRIER = laneConfigServer + "getCarNumberByCarrier";
+   // public static final String URL_GETCARTYPEBYCARRIER = laneConfigServer + "getCarTypeByCarrier";
     public static final String URL_UPDATE = "https://s3.cn-north-1.amazonaws.com.cn/test-fengxion/S11-Update";
     public static final String URL_UPDATE_XIETIAN ="https://s3-ap-northeast-1.amazonaws.com/s11-upload";
 

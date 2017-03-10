@@ -106,7 +106,7 @@ public class CarNumberActivity extends BaseTitleAcitvity {
                         .add("carType",carType)
                         .build();
                 Request request = new Request.Builder()
-                        .url(Urls.URL_GETCARNUMBERByCARRIER.url())
+                        .url(Urls.URL_GETCARNUMBERBYCARRIER.url())
                         .header("User-Agent", "OkHttp Headers.java")
                         .addHeader("Accept", "application/json; q=0.5")
                         .addHeader("Accept", "application/vnd.github.v3+json")

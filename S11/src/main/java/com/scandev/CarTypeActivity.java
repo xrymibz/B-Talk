@@ -121,7 +121,7 @@ public class CarTypeActivity  extends BaseTitleAcitvity {
                         .add("carrierAbbr", carrier)
                         .build();
                 Request request = new Request.Builder()
-                        .url(Urls.URL_GETCARTYPEByCARRIER.url())
+                        .url(Urls.URL_GETCARTYPEBYCARRIER.url())
                         .header("User-Agent", "OkHttp Headers.java")
                         .addHeader("Accept", "application/json; q=0.5")
                         .addHeader("Accept", "application/vnd.github.v3+json")

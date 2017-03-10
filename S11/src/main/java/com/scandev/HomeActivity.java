@@ -203,7 +203,7 @@ public class HomeActivity extends BaseTitleAcitvity {
                         .build();
                 System.out.println("isInjection zzz   :   "+isInjection);
                 Request request = new Request.Builder()
-                        .url(Urls.URL_GETLANESByCARRIER.url())
+                        .url(Constant.URL_GETLANE)
                         .header("User-Agent", "OkHttp Headers.java")
                         .addHeader("Accept", "application/json; q=0.5")
                         .addHeader("Accept", "application/vnd.github.v3+json")
