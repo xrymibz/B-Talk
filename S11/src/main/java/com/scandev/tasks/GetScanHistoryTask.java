@@ -110,7 +110,11 @@ public class GetScanHistoryTask extends AsyncTask<Map<String, String>, Integer, 
                     String cargoType = array.getString(3);
                     int total = array.getInt(5);
                     totalnum += total;
-                    map.put("historyinfo", time + "\t\t\t\t\t" + laneE + "\t\t\t\t\t" + arc + "\n" + cargoType + "\t\t\t\t\t共" + total + "条");
+                    if(cargoType.equals("Injection")){
+                        map.put("historyinfo", time + "\n" + laneE + "\n" + cargoType + "\t\t\t\t\t共" + total + "条");
+                    }else{
+                        map.put("historyinfo", time + "\n" + laneE + "\n" + arc + "\n" + cargoType + "\t\t\t\t\t共" + total + "条");
+                    }
                     list.add(map);
                 }
             }

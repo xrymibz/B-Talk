@@ -120,10 +120,16 @@ public class PickupConfirmDialog extends Dialog{
 
         dialogTitle.setText(R.string.pickupconfirmtitle);
         operatorView.setText(datas.get("carriername"));
-        laneView.setText(datas.get("lanename"));
     //    arcView.setText(datas.get("arcname"));
-        carstype.setText("车型 ： "+datas.get("carType"));
-        carnumber.setText("车牌 ： "+datas.get("carNumber"));
+        if(datas.get("arctype").equals("Injection")) {
+            laneView.setText(datas.get("lanename"));
+            carstype.setText("车型 ： " + datas.get("carType"));
+            carnumber.setText("车牌 ： " + datas.get("carNumber"));
+        }else{
+            carstype.setText("");
+            carnumber.setText("");
+            laneView.setText(datas.get("lanename")+"  "+datas.get("arcname"));
+        }
         totalNumView.setText(datas.get("listtotalnum"));
         supposedScanView.setText(datas.get("supposedscannum"));
         scanedView.setText(datas.get("scanednum"));

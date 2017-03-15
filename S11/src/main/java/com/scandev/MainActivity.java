@@ -110,7 +110,7 @@ public class MainActivity extends ActionBarActivity {
             if (updateVersionService.isNeedUpdate()) {
                 showUpdateDialog();
             } else {
-  //             Toast.makeText(MainActivity.this, "已是最新版本" + info.getVersion(), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(MainActivity.this, "已是最新版本" + info.getVersion(), Toast.LENGTH_SHORT).show();
             }
         }
     };

@@ -128,9 +128,14 @@ public class ExceptionEditActivity extends BaseTitleAcitvity
         setRtTitle(login_user.getString("carrierName",""));
         datas = new HashMap<>();
         DataLoad.uploadData(this, login_user, datas);
-
         laneName.setText(datas.get("lanename"));
-        arcName.setText(datas.get("arcname"));
+        String isInjection = login_user.getString("isInjection", "");
+        if(isInjection.equals("1")){
+            arcName.setText("");
+        }else{
+            arcName.setText(datas.get("arcname"));
+        }
+
 
         //Picture
         imgPathList = new ArrayList<>();

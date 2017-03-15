@@ -162,7 +162,7 @@ public abstract class BaseTitleAcitvity extends Activity {
 
 
     /**
-     * 设置右边你按钮文字属性
+     * 设置右边的按钮文字属性
      *
      * @param title
      */
