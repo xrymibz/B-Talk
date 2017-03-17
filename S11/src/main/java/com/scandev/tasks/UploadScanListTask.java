@@ -78,16 +78,16 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
 
         System.out.println("Let's FUCK"+scanContent.toString());
 
-//        try {
-//            ByteArrayOutputStream out = new ByteArrayOutputStream();
-//            GZIPOutputStream gzip = new GZIPOutputStream(out);
-//            gzip.write(scanContent.toString().getBytes());
-//            gzip.close();
-//           out1 = out.toString("ISO-8859-1");
-//            out.close();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            GZIPOutputStream gzip = new GZIPOutputStream(out);
+            gzip.write(scanContent.toString().getBytes());
+            gzip.close();
+           out1 = out.toString("ISO-8859-1");
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try {
             Log.i(TAG, "begin request new");
@@ -99,7 +99,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
                     + Constant.METHOD_UPLOAD).toUpperCase();
             RequestBody formBody = new FormEncodingBuilder()
                     .add("sign", sign)
-                    .add("scanContent", scanContent.toString())
+                    .add("scanContent", out1)
                     .build();
             Request request = new Request.Builder()
                     .url(Urls.URL_UPLOAD.url())
