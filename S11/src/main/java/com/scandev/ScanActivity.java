@@ -134,6 +134,8 @@ public class ScanActivity extends BaseTitleAcitvity
         DataLoad.uploadData(this, login_user, uploadData);
 
         getCheckListTsk = new GetCheckListTsk(this);
+
+        if(!login_user.getString("arcType", "").equals("Injection"))
         getCheckListTsk.execute(uploadData);
 
         scanNums = currentScanItemList.size();
@@ -184,7 +186,7 @@ public class ScanActivity extends BaseTitleAcitvity
             return;
         }
         System.out.println(notCheckedList.contains(scanResult)+"   arctype :   "+uploadData.get("arctype")) ;
-        if (!notCheckedList.contains(scanResult)) {
+        if (!notCheckedList.contains(scanResult)&&!login_user.getString("arcType", "").equals("Injection")) {
             if (!Parser.validateBarCode(scanResult, uploadData.get("arctype"), uploadData.get("sourceFC"))) {
                 //?????????????,????TOAST???
                 S11Application.playSound(3, 1);
