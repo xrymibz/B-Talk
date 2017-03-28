@@ -135,7 +135,7 @@ public class ScanActivity extends BaseTitleAcitvity
 
         getCheckListTsk = new GetCheckListTsk(this);
 
-        if(!login_user.getString("arcType", "").equals("Injection"))
+ //       if(!login_user.getString("arcType", "").equals("Injection"))
         getCheckListTsk.execute(uploadData);
 
         scanNums = currentScanItemList.size();
@@ -186,7 +186,7 @@ public class ScanActivity extends BaseTitleAcitvity
             return;
         }
         System.out.println(notCheckedList.contains(scanResult)+"   arctype :   "+uploadData.get("arctype")) ;
-        if (!notCheckedList.contains(scanResult)&&!login_user.getString("arcType", "").equals("Injection")) {
+        if (!notCheckedList.contains(scanResult)) {
             if (!Parser.validateBarCode(scanResult, uploadData.get("arctype"), uploadData.get("sourceFC"))) {
                 //?????????????,????TOAST???
                 S11Application.playSound(3, 1);
@@ -196,7 +196,7 @@ public class ScanActivity extends BaseTitleAcitvity
                 toast.show();
                 return;
             }
-            if (!excessFlag) {
+            if (!excessFlag||uploadData.get("arctype").equals("Injection")) {
                 checkBox(scanResult);
                 return;
             }
@@ -228,12 +228,12 @@ public class ScanActivity extends BaseTitleAcitvity
 
     private void checkBox(String barCode) {
         if (uploadData.get("arctype").equals("VReturn")) {
-            //?????????,??????????,????????????????????
+
             CaseScanDialog csDialog = new CaseScanDialog(this, barCode);
             seeBox = true;
             csDialog.show();
         } else {
-            //????????????
+
             callBackRecord(barCode);
         }
         //callBackRecord(barCode);

@@ -57,6 +57,7 @@ public class CarNumberActivity extends BaseTitleAcitvity {
     private final OkHttpClient client = new OkHttpClient();
     private String carType = "";
     private String arcType = "";
+    private String  laneName= "";
     private static String carrier = "";
     private TextView carnumberType = null;
     private ListView listView = null;
@@ -79,6 +80,7 @@ public class CarNumberActivity extends BaseTitleAcitvity {
         login_user = getSharedPreferences("login_user", Activity.MODE_PRIVATE);
         carrier = login_user.getString("carrierAbbr", "");
         carType = login_user.getString("carType", "");
+        laneName = login_user.getString("laneName", "");
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
         Intent intent = getIntent();
@@ -103,9 +105,11 @@ public class CarNumberActivity extends BaseTitleAcitvity {
         @Override
         public void run() {
             try{
+                System.out.println(laneName+"zzzzzzzzzzzzzzzzzzzzzzzzzz");
                 RequestBody formBody = new FormEncodingBuilder()
                         .add("carrierAbbr", carrier)
-                        .add("carType",carType)
+                        .add("carType",carType )
+                        .add("laneName",laneName)
                         .build();
                 Request request = new Request.Builder()
                         .url(Urls.URL_GETCARNUMBERBYCARRIER.url())

@@ -81,7 +81,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
         try {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             GZIPOutputStream gzip = new GZIPOutputStream(out);
-            gzip.write(scanContent.toString().getBytes());
+            gzip.write(scanContent.toString().getBytes("UTF-8"));
             gzip.close();
            out1 = out.toString("ISO-8859-1");
             out.close();
