@@ -260,7 +260,7 @@ public class CarNumberActivity extends BaseTitleAcitvity {
         if(carNumber==null || carNumber.length()==0)
             return true;
         int len = carNumber.length();
-        if(len>8) return false;
+        if(len>8||len<7) return false;
         char []s = carNumber.toCharArray();
         for(char i : s){
             if(i==' ') return false;

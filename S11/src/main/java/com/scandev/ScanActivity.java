@@ -135,7 +135,7 @@ public class ScanActivity extends BaseTitleAcitvity
 
         getCheckListTsk = new GetCheckListTsk(this);
 
- //       if(!login_user.getString("arcType", "").equals("Injection"))
+        if(!login_user.getString("arcType", "").equals("Injection"))
         getCheckListTsk.execute(uploadData);
 
         scanNums = currentScanItemList.size();
@@ -345,11 +345,12 @@ public class ScanActivity extends BaseTitleAcitvity
     private void fillData() {
         int notScanedNum = 0;
         int excessNum = 0;
-
-        for (String string : scanRecordList.keySet()) {
-            if (notCheckedList.contains(string)) notScanedNum++;
-            else {
-                if (excessFlag) excessNum++;
+        if (!uploadData.get("arctype").equals("Injection")) {
+            for (String string : scanRecordList.keySet()) {
+                if (notCheckedList.contains(string)) notScanedNum++;
+                else {
+                    if (excessFlag) excessNum++;
+                }
             }
         }
         notScanedNum = notCheckedList.size() - notScanedNum;

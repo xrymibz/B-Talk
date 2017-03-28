@@ -14,8 +14,8 @@ public class DataLoad {
     public static void uploadData(Context context, SharedPreferences login_user, Map<String, String> uploadData) {
         uploadData.put("laneE", login_user.getString("laneE", "No LaneE"));
         uploadData.put("carrierabbr", login_user.getString("carrierAbbr", "No carrierAbbr"));
-        uploadData.put("sourceFC", login_user.getString("sourceFC", null));
-        uploadData.put("destinationFC", login_user.getString("destinationFC", null));
+        uploadData.put("sourceFC", login_user.getString("sourceFC", ""));
+        uploadData.put("destinationFC", login_user.getString("destinationFC", ""));
         uploadData.put("arctype", login_user.getString("arcType", null));
         uploadData.put("sortcode", login_user.getString("sortCode", null));
         uploadData.put("carriername", login_user.getString("carrierName", null));
