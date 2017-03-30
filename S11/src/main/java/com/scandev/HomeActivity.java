@@ -157,7 +157,9 @@ public class HomeActivity extends BaseTitleAcitvity {
                     intent.putExtra("arcType", arcType + "");
 
                     if(arcType.equals("Injection")){
-                        //Injection,跳转到车型选择界面
+                        //Injection,跳转到车型选择界面,没有来源和目的仓库，所以显式置空
+                        editor.putString("sourceFC", "");
+                        editor.putString("destinationFC", "");
                         intent.setClass(HomeActivity.this,  CarTypeActivity.class);
                     }else{
                         //非Injection，跳转到arc选择界面

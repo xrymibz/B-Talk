@@ -61,7 +61,7 @@ public class ExceptionQueryTask extends AsyncTask<Map<String, String>, Integer, 
         String date1 = params[0].get("startTime");
         String date2 = params[0].get("endTime");
         String cargoType = params[0].get("arctype");
-        String sortCode = null;
+        String sortCode = "";
         if (params[0].get("sortcode") != null) {
             sortCode = params[0].get("sortcode");
         }
@@ -69,6 +69,7 @@ public class ExceptionQueryTask extends AsyncTask<Map<String, String>, Integer, 
         String sign = Md5Util.getMD5Str(Constant.app_secret_true + Constant.app_key_true +
                 Constant.METHOD_EXCEPTION_HISTORY).toUpperCase();
 
+  //      Log.d("date",sign+" "+sourceFC+"  "+destinationFC+"  "+cargoType+"  "+sortCode.length()+"  ");
         RequestBody formBody = new FormEncodingBuilder().add("sign", sign)
                 .add("laneE", laneE)
                 .add("source", sourceFC)
@@ -96,10 +97,10 @@ public class ExceptionQueryTask extends AsyncTask<Map<String, String>, Integer, 
             Response response = client.newCall(request).execute();
             if (response.isSuccessful()) {
                 JSONObject jsonResult = new JSONObject(response.body().string());
-                System.out.println(response.body().toString()+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+    //            System.out.println(response.body().toString()+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
                 String data = jsonResult.getString("data");
        //         data = ZipUtil.uncompress(data);
-                System.out.println(data+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+  //              System.out.println(data+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
                 if (data.length() > 0) {
                     resultArray = new JSONArray(data);
                 }
