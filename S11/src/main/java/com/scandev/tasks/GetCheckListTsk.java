@@ -52,7 +52,7 @@ public class GetCheckListTsk extends AsyncTask<Map<String, String>, Integer, Int
         String arcType = params[0].get("arctype");
         String laneE = params[0].get("laneE");
         String time = Constant.formateDate(new Date());
-/*        String time = "2016-06-27 19:31:00";
+ /*       String time = "2016-06-27 19:31:00";
         String sourceFC = "SHA2";/
         String destinationFC = "SHE1";
         String arcType = "Transfer";

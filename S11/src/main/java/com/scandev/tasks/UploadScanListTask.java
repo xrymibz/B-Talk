@@ -76,7 +76,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
             e.printStackTrace();
         }
 
-        System.out.println("Let's FUCK"+scanContent.toString());
+        Log.d("Let's FUCK",scanContent.toString());
 
         try {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -147,7 +147,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
         String arcType = datas.get("arctype");
         String carType = datas.get("carType");
         String carNumber = datas.get("carNumber");
-        String time = Constant.formateDate(new Date());
+        String time = Constant.formateDate(new Date());   //上传时间
 
         taskId = arcType.substring(0, 1) + sourceFC + destinationFC + sdf2.format(new Date());
         taskInfo.put("userId", activity.getUserId());
