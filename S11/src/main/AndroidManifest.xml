@@ -51,8 +51,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FunctionActivity"
-            android:label="@string/title_activity_function"
+        android:name=".FunctionActivity"
+        android:label="@string/title_activity_function"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScanTypeActivity"
+            android:label="@string/title_activity_scantype"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity

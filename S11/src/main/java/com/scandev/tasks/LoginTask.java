@@ -16,6 +16,7 @@ import com.scandev.HomeActivity;
 import com.scandev.MainActivity;
 import com.scandev.R;
 import com.scandev.S11Application;
+import com.scandev.ScanTypeActivity;
 import com.scandev.model.Constant;
 import com.scandev.model.LoginResult;
 import com.scandev.model.ServerAddr;
@@ -215,7 +216,7 @@ public class LoginTask extends AsyncTask<String, Integer, LoginResult> {
 
                 editor.commit();
                 Intent intent = new Intent();
-                intent.setClass(activity, HomeActivity.class);
+                intent.setClass(activity, ScanTypeActivity.class);
  //               intent.setClass(activity, CarNumberActivity.class);
  // this  is a carstypeactivity'test                intent.setClass(activity, CarsTypeActivity.class);
                 activity.startActivity(intent);

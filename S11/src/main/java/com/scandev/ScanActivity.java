@@ -112,7 +112,7 @@ public class ScanActivity extends BaseTitleAcitvity
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
 
-        if (nowArc == null) {//!!!!!!!!!!!!!!!!!!!!!!!
+        if (nowArc == null) {
             Log.e(TAG, "nowArc aquire fail");
         }
 

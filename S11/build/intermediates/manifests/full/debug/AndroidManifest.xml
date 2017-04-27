@@ -51,6 +51,11 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.scandev.ScanTypeActivity"
+            android:label="@string/title_activity_scantype"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.scandev.HistoryActivity"
             android:label="@string/title_activity_history"
             android:launchMode="singleTask"

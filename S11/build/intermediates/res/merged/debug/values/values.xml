@@ -377,6 +377,7 @@
     <string name="title_activity_history">扫描历史查询</string>
     <string name="title_activity_home">请选择路线</string>
     <string name="title_activity_scan">开始扫描</string>
+    <string name="title_activity_scantype">扫描选择</string>
     <string name="uncheck">撤销</string>
     <string name="upload">上传 </string>
     <string name="uploadfail">上传失败!</string>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="请选择扫描类型"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/selector_button_system"/>
+
+
+    <Button
+        android:id="@+id/outofFC"
+        android:layout_marginTop="100sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/selector_button_system"
+        android:text="出库扫描"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:onClick="outofFC"/>
+    <Button
+        android:id="@+id/inofFC"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/selector_button_system"
+        android:text="入库扫描"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:onClick="inofFC"/>
+
+</LinearLayout>

@@ -13,6 +13,7 @@
     <string name="title_activity_carstype">请选择车型</string>
     <string name="title_activity_carnumber">请输入车牌</string>
     <string name="title_activity_function">功能选择</string>
+    <string name="title_activity_scantype">扫描选择</string>
     <string name="title_activity_arc">请选择Arc</string>
     <string name="title_activity_scan">开始扫描</string>
     <string name="title_activity_history">扫描历史查询</string>
