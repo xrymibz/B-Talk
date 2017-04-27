@@ -14,7 +14,6 @@ import android.view.View;
 
 public class ScanTypeActivity extends BaseTitleAcitvity {
     private String title = "扫描方式";
-    private String arcType;
     private String TAG = "ScanTypeActivity";
     SharedPreferences login_user;
     @Override
@@ -25,9 +24,8 @@ public class ScanTypeActivity extends BaseTitleAcitvity {
 
         setTitle(title);
         setRtTitle(login_user.getString("carrierName",""));
-        Intent intent = getIntent();
-        arcType = intent.getStringExtra("arcType");
-        System.out.println(arcType+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
+
 
     }
 
@@ -41,18 +39,10 @@ public class ScanTypeActivity extends BaseTitleAcitvity {
         Intent intent = new Intent();
         intent.putExtra("functionCode", 0);
         SharedPreferences.Editor editor = login_user.edit();
-        editor.putString("ScanType","out");
+        editor.putString("scanType","out");
         editor.commit();
+        intent.setClass(ScanTypeActivity.this,  HomeActivity.class);
 
-        if(arcType.equals("Injection")){
-            //Injection,跳转到车型选择界面,没有来源和目的仓库，所以显式置空
-            editor.putString("sourceFC", "");
-            editor.putString("destinationFC", "");
-            intent.setClass(ScanTypeActivity.this,  CarTypeActivity.class);
-        }else{
-            //非Injection，跳转到arc选择界面
-            intent.setClass(ScanTypeActivity.this, ArcActivity.class);
-        }
 
         startActivity(intent);
     }
@@ -61,9 +51,9 @@ public class ScanTypeActivity extends BaseTitleAcitvity {
         Log.i(TAG, "Go To History Page");
         Intent intent = new Intent();
         SharedPreferences.Editor editor = login_user.edit();
-        editor.putString("ScanType","in");
+        editor.putString("scanType","in");
         editor.commit();
-        intent.setClass(ScanTypeActivity.this, ArcActivity.class);
+        intent.setClass(ScanTypeActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

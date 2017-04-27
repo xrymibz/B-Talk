@@ -12,10 +12,9 @@
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="请选择扫描类型"
-        android:textColor="#ffffff"
         android:textSize="20sp"
         android:gravity="center"
-        android:background="@drawable/selector_button_system"/>
+        />
 
 
     <Button

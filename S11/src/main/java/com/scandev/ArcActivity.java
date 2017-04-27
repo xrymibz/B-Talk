@@ -49,6 +49,7 @@ public class ArcActivity extends BaseTitleAcitvity {
     private static final int COMFAILED = -2;
     private static final int FAILED = -1;
     private static final String TAG = "ArcActivity";
+    private String scanType = "";
     private int laneId = 0;
     private int functionCode = 0;
     private JSONObject res = null;
@@ -70,9 +71,11 @@ public class ArcActivity extends BaseTitleAcitvity {
         setRtTitle(login_user.getString("carrierName", ""));
         Intent intent = getIntent();
         laneId = Integer.parseInt(intent.getStringExtra("laneId"));
+        scanType = login_user.getString("scanType", "");
         functionCode = intent.getIntExtra("functionCode", 0);//need check the code?
 
         System.out.println("Selected lane is " + laneId);
+        System.out.println("Selected scanType is " + scanType);
         new Thread(getArc).start();
     }
 
@@ -117,6 +120,7 @@ public class ArcActivity extends BaseTitleAcitvity {
             try {
                 RequestBody formBody = new FormEncodingBuilder()
                         .add("laneId", laneId + "")
+                        .add("scanType",scanType)
                         .build();
                 Request request = new Request.Builder()
                         .url(Constant.URL_GETARC)
