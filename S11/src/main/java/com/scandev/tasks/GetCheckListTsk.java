@@ -109,6 +109,7 @@ public class GetCheckListTsk extends AsyncTask<Map<String, String>, Integer, Int
                 System.out.println(jsonResult.getString("message"));
                 returnValue = Constant.COMPLETED;
             } else {
+                Log.d("geichecklisttask :","failed");
                 System.out.println(response.code());
                 String string = response.body().string();
                 System.out.println(string);
@@ -125,6 +126,7 @@ public class GetCheckListTsk extends AsyncTask<Map<String, String>, Integer, Int
 
     @Override
     protected void onPostExecute(Integer result) {
+        Log.d("geichecklisttask :","finished");
         activity.progressDialog.dismiss();
         activity.listTotalNum = activity.checkedList.size() + activity.notCheckedList.size();
         activity.supposedScanNum = activity.notCheckedList.size();

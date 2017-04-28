@@ -130,6 +130,7 @@ public class ScanActivity extends BaseTitleAcitvity
             notCheckedList = new HashSet<>();
         }
 
+
         uploadData = new HashMap<>();
         DataLoad.uploadData(this, login_user, uploadData);
 

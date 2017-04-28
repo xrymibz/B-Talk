@@ -194,8 +194,8 @@ public class ArcActivity extends BaseTitleAcitvity {
                     String destinationFC = arc.getString("destinationFC");
                     String sortCode = arc.getString("sortCode");
                     String arcType = arc.getString("arcType");
-                    editor.putString("sourceFC", sourceFC);
-                    editor.putString("destinationFC", destinationFC);
+                    editor.putString("sourceFC", "");
+                    editor.putString("destinationFC", "");
                     editor.putString("sortCode", sortCode);
                     editor.putString("arcType", arcType);
                     editor.putInt("arcId", Integer.parseInt(arc.getString("arcId")));
