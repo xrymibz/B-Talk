@@ -41,7 +41,7 @@ public class Constant {
     public static final String REGEX_VRETURN = "^(\\d{13}|\\d{20}|\\d{14}|\\*(\\d{20}|0{5}\\d{14})\\*)$";
     public static final String REGEX_TRANS = "^(csX[A-Za-z0-9]\\d[A-Za-z0-9]{6}R{0,1}|tsX\\d{8}R{0,1})$";
     public static final String REGEX_MLPS = "^(\\d{12}|\\d{13}|\\d{14}|PT\\d{6})$";
-    public static final String REGEX_INJECTION = "^(\\d{12}|\\d{13}|\\d{14}|PT\\d{6}|YT[A-Za-z]\\d{3})$";
+    public static final String REGEX_INJECTION = "^(\\d{12}|\\d{13}|\\d{14}|PT\\d{6}|YT\\d{4})$";
 
     public static final String ARC_TYPE_VRETURN = "VReturn";
     public static final String ARC_TYPE_MLPS = "MLPS";

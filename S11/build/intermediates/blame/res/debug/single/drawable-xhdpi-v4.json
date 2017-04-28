@@ -44,24 +44,24 @@
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon.jpeg",
-        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\drawable-xhdpi\\icon.jpeg"
-    },
-    {
-        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
         "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "C:\\Users\\liuyifan\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon.jpeg",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\src\\main\\res\\drawable-xhdpi\\icon.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "C:\\Users\\xietian\\Desktop\\B-Talk\\S11\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_half_black_16dp.png",
