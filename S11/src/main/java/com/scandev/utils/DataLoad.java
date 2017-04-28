@@ -23,6 +23,7 @@ public class DataLoad {
         uploadData.put("arcname", login_user.getString("arcName", "No Arc"));
         uploadData.put("carNumber",login_user.getString("carNumber", "No carNumber"));
         uploadData.put("carType",login_user.getString("carType", "No carType"));
+        uploadData.put("scanType",login_user.getString("scanType", "No scanType"));
     }
 
     public static void changeType(Context activity, ExceptionItem exception) {

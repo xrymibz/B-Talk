@@ -51,6 +51,7 @@ public class GetCheckListTsk extends AsyncTask<Map<String, String>, Integer, Int
         String destinationFC = params[0].get("destinationFC");
         String arcType = params[0].get("arctype");
         String laneE = params[0].get("laneE");
+        String scanType = params[0].get("scanType");
         String time = Constant.formateDate(new Date());
  /*       String time = "2016-06-27 19:31:00";
         String sourceFC = "SHA2";/
@@ -68,6 +69,7 @@ public class GetCheckListTsk extends AsyncTask<Map<String, String>, Integer, Int
                 .add("arcType", arcType)
                 .add("laneE", laneE)
                 .add("time", time)
+                .add("scanType",scanType)
                 .build();
         Request request = new Request.Builder()
                 .url(Urls.URL_GETCHECKLIST.url())

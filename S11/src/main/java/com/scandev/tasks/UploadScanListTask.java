@@ -75,7 +75,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
             System.out.println("json exception~~");
             e.printStackTrace();
         }
-
+        String scanType = params[0].get("scanType");
         Log.d("Let's FUCK",scanContent.toString());
 
         try {
@@ -100,6 +100,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
             RequestBody formBody = new FormEncodingBuilder()
                     .add("sign", sign)
                     .add("scanContent", out1)
+                    .add("scanType",scanType)
                     .build();
             Request request = new Request.Builder()
                     .url(Urls.URL_UPLOAD.url())
@@ -147,8 +148,12 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
         String arcType = datas.get("arctype");
         String carType = datas.get("carType");
         String carNumber = datas.get("carNumber");
+        String scanType = datas.get("scanType");
         String time = Constant.formateDate(new Date());   //上传时间
 
+        if(scanType==null||!scanType.equals("in")){
+            scanType = "out";
+        }
         taskId = arcType.substring(0, 1) + sourceFC + destinationFC + sdf2.format(new Date());
         taskInfo.put("userId", activity.getUserId());
         taskInfo.put("source", sourceFC);
@@ -162,6 +167,7 @@ public class UploadScanListTask extends AsyncTask<Map<String, String>, Integer, 
         taskInfo.put("carrierAbbr", carrierAbbr);
         taskInfo.put("carType", carType);
         taskInfo.put("carNumber", carNumber);
+        taskInfo.put("scanType", scanType);
 
       /*  String time = "2016-06-27 19:30:00";
         String sourceFC = "SHA2";

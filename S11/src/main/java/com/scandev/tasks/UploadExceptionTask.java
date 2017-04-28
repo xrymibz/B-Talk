@@ -159,7 +159,11 @@ public class UploadExceptionTask extends AsyncTask<ExceptionItem, Integer, Integ
         String cargoType = datas.get("arctype");
         String carNumber = datas.get("carNumber");
         String carType = datas.get("carType");
+        String scanType = datas.get("scanType");
         String time = Constant.formateDate(new Date());
+        if(scanType==null||!scanType.equals("in")){
+            scanType = "out";
+        }
 
         String taskId = cargoType.substring(0, 1) + source + destination + sdf2.format(new Date());
         jb.put("userId", ac.getUserId());
@@ -174,6 +178,7 @@ public class UploadExceptionTask extends AsyncTask<ExceptionItem, Integer, Integ
         jb.put("carrierAbbr", carrierAbbr);
         jb.put("carNumber",carNumber);
         jb.put("carType",carType);
+        jb.put("scanType",scanType);
 
         /*JSONObject obj = new JSONObject();
         obj.put("scanId", activity.exception.getBarCode());
