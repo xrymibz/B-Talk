@@ -18,6 +18,6 @@ public enum Urls{
     }
 
     public String url(){
-        return ServerAddr.test3.getAddr() + this.route;
+        return ServerAddr.test.getAddr() + this.route;
     }
 }
