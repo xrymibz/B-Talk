@@ -97,10 +97,10 @@ public class ExceptionQueryTask extends AsyncTask<Map<String, String>, Integer, 
             Response response = client.newCall(request).execute();
             if (response.isSuccessful()) {
                 JSONObject jsonResult = new JSONObject(response.body().string());
-    //            System.out.println(response.body().toString()+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+                System.out.println(response.body().toString()+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
                 String data = jsonResult.getString("data");
-       //         data = ZipUtil.uncompress(data);
-  //              System.out.println(data+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+                data = ZipUtil.uncompress(data);
+                System.out.println(data+"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
                 if (data.length() > 0) {
                     resultArray = new JSONArray(data);
                 }

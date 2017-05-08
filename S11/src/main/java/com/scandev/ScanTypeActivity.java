@@ -1,6 +1,8 @@
 package com.scandev;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -35,7 +37,7 @@ public class ScanTypeActivity extends BaseTitleAcitvity {
     }
 
     public void outofFC(View v) {
-        Log.i(TAG, "Go To Scan Page");
+        Log.i(TAG, "出库");
         Intent intent = new Intent();
         intent.putExtra("functionCode", 0);
         SharedPreferences.Editor editor = login_user.edit();
@@ -48,13 +50,35 @@ public class ScanTypeActivity extends BaseTitleAcitvity {
     }
 
     public void inofFC(View v) {
-        Log.i(TAG, "Go To History Page");
+        Log.i(TAG, "入库");
         Intent intent = new Intent();
-        SharedPreferences.Editor editor = login_user.edit();
-        editor.putString("scanType","in");
-        editor.commit();
-        intent.setClass(ScanTypeActivity.this, HomeActivity.class);
-        startActivity(intent);
+        if(login_user.getString("isInjection","0").equals("1")){
+            new AlertDialog.Builder(ScanTypeActivity.this).setTitle("系统提示")//设置对话框标题
+
+                    .setMessage("Injection类型目前不支持入库操作，请重新选择扫描类型")//设置显示的内容
+
+                    .setNegativeButton("确定",new DialogInterface.OnClickListener() {//添加返回按钮
+
+
+
+                        @Override
+
+                        public void onClick(DialogInterface dialog, int which) {//响应事件
+
+                            // TODO Auto-generated method stub
+
+                            Log.i("alertdialog"," 请保存数据！");
+
+                        }
+
+                    }).show();//在按键响应事件中显示此对话框
+        }else{
+            SharedPreferences.Editor editor = login_user.edit();
+            editor.putString("scanType","in");
+            editor.commit();
+            intent.setClass(ScanTypeActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }
     }
 
 

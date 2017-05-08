@@ -263,43 +263,43 @@ public class HomeActivity extends BaseTitleAcitvity {
     };
 
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (((keyCode == KeyEvent.KEYCODE_BACK) || (keyCode == KeyEvent.KEYCODE_HOME))
-                && event.getRepeatCount() == 0) {
-            dialog_exit(this);
-        }
-        return false;
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (((keyCode == KeyEvent.KEYCODE_BACK) || (keyCode == KeyEvent.KEYCODE_HOME))
+//                && event.getRepeatCount() == 0) {
+//            dialog_exit(this);
+//        }
+//        return false;
+//    }
 
-    public static void dialog_exit(Context context) {
-        AlertDialog.Builder builder = new Builder(context);
-        builder.setMessage(R.string.suretoexit);
-        builder.setTitle(R.string.notify);
-
-        builder.setPositiveButton(R.string.positive, new OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                dialog.dismiss();
-                android.os.Process.killProcess(android.os.Process.myPid());
-
-            }
-
-        });
-        builder.setNegativeButton(R.string.negative, new OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-
-            }
-
-
-        });
-        builder.create().show();
-    }
+//    public static void dialog_exit(Context context) {
+//        AlertDialog.Builder builder = new Builder(context);
+//        builder.setMessage(R.string.suretoexit);
+//        builder.setTitle(R.string.notify);
+//
+//        builder.setPositiveButton(R.string.positive, new OnClickListener() {
+//
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//
+//                dialog.dismiss();
+//                android.os.Process.killProcess(android.os.Process.myPid());
+//
+//            }
+//
+//        });
+//        builder.setNegativeButton(R.string.negative, new OnClickListener() {
+//
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                dialog.dismiss();
+//
+//            }
+//
+//
+//        });
+//        builder.create().show();
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

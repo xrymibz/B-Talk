@@ -25,6 +25,7 @@ public class PickupConfirmDialog extends Dialog{
     private TextView operatorView;
     private TextView laneView;
     private TextView arcView;
+    private TextView scantype;
     private TextView carstype;
     private TextView carnumber;
     private TextView scanedView;
@@ -98,6 +99,7 @@ public class PickupConfirmDialog extends Dialog{
         operatorView = (TextView)mView.findViewById(R.id.operator);
         laneView = (TextView)mView.findViewById(R.id.lane);
    //     arcView = (TextView)mView.findViewById(R.id.arc);
+        scantype = (TextView)mView.findViewById(R.id.scantype);
         carstype = (TextView)mView.findViewById(R.id.cartype);
         carnumber = (TextView)mView.findViewById(R.id.carnumber);
         totalNumView = (TextView)mView.findViewById(R.id.totalnum);
@@ -121,6 +123,12 @@ public class PickupConfirmDialog extends Dialog{
         dialogTitle.setText(R.string.pickupconfirmtitle);
         operatorView.setText(datas.get("carriername"));
     //    arcView.setText(datas.get("arcname"));
+        if(datas.get("scanType").equals("in")){
+            scantype.setText("扫描类型： " + "入库扫描");
+        }else{
+            scantype.setText("扫描类型： " + "出库扫描");
+        }
+
         if(datas.get("arctype").equals("Injection")) {
             laneView.setText(datas.get("lanename"));
             carstype.setText("车型 ： " + datas.get("carType"));
