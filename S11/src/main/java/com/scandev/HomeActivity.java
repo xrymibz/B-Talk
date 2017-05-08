@@ -148,6 +148,8 @@ public class HomeActivity extends BaseTitleAcitvity {
                     editor.putString("laneName", laneName);
                     editor.putString("laneE", laneE);
                     editor.putString("arcType", arcType);
+                    editor.putString("sourceFC", "");
+                    editor.putString("destinationFC", "");
                     editor.commit();
                     int laneId = (Integer) lane.get("laneId");
                     System.out.println("You've choosed" + laneId + "," + lane.get("laneName") +"   ");
