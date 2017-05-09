@@ -39,7 +39,7 @@ public class Constant {
     public static final int ERROR = -1;
 
     public static final String REGEX_VRETURN = "^(\\d{13}|\\d{20}|\\d{14}|\\*(\\d{20}|0{5}\\d{14})\\*)$";
-    public static final String REGEX_TRANS = "^(csX[A-Za-z0-9]\\d[A-Za-z0-9]{6}R{0,1}|tsX\\d{8}R{0,1})$";
+    public static final String REGEX_TRANS = "^(tsX[A-Za-z0-9]\\d[A-Za-z0-9]{6}R{0,1}|csX[A-Za-z0-9]\\d[A-Za-z0-9]{6}R{0,1}|tsX\\d{8}R{0,1})$";
     public static final String REGEX_MLPS = "^(\\d{12}|\\d{13}|\\d{14}|PT\\d{6})$";
     public static final String REGEX_INJECTION = "^(\\d{12}|\\d{13}|\\d{14}|PT\\d{6}|YT\\d{4}|YT[A-Za-z0-9]\\d{3})$";
 
