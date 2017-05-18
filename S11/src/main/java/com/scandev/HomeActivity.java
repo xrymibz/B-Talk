@@ -201,6 +201,7 @@ public class HomeActivity extends BaseTitleAcitvity {
                         .add("carrierId", carrier)
                         .add("isInjection",isInjection)
                         .build();
+                System.out.println("carrierId zzz   :   "+carrier);
                 System.out.println("isInjection zzz   :   "+isInjection);
                 Request request = new Request.Builder()
                         .url(Constant.URL_GETLANE)

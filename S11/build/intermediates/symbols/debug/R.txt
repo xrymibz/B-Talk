@@ -868,7 +868,7 @@ int raw didong 0x7f050000
 int raw error 0x7f050001
 int raw noise 0x7f050002
 int raw warn 0x7f050003
-int raw zhengshu 0x7f050004
+int raw zhengshu1 0x7f050004
 int string BarcodeMiss 0x7f060014
 int string CargoDamage 0x7f060015
 int string CargoExcess 0x7f060016

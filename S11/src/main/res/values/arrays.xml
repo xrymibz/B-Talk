@@ -25,6 +25,22 @@
         <item>辛克物流</item>
         <item>嘉捷信达</item>
         <item>中谊</item>
+        <item>北京CRE</item>
+        <item>北京日报</item>
+        <item>成都CRE</item>
+        <item>成都彩虹</item>
+        <item>东源新地</item>
+        <item>凡宇</item>
+        <item>哈尔滨天地</item>
+        <item>合肥汇文</item>
+        <item>嘉里大通</item>
+        <item>深圳有信达</item>
+        <item>沈阳黄马甲</item>
+        <item>昆山聚力</item>
+        <item>轩辕物流</item>
+
+
+
     </string-array>
 
     <string-array name="exceptions">

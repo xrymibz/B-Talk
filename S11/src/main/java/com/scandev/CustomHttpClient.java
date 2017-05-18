@@ -31,7 +31,7 @@ public class CustomHttpClient {
             InputStream in = null;
             try {
                 in = S11Application.getInstance().getResources().openRawResource(
-                        R.raw.zhengshu);
+                        R.raw.zhengshu1);
                 CertificateFactory cerFactory = CertificateFactory.getInstance("X.509");
                 Certificate cer = cerFactory.generateCertificate(in);
                 KeyStore trustStore = KeyStore.getInstance("BKS");

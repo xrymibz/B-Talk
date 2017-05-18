@@ -2047,7 +2047,7 @@ containing a value of this type.
         public static final int error=0x7f050001;
         public static final int noise=0x7f050002;
         public static final int warn=0x7f050003;
-        public static final int zhengshu=0x7f050004;
+        public static final int zhengshu1=0x7f050004;
     }
     public static final class string {
         public static final int BarcodeMiss=0x7f060014;
