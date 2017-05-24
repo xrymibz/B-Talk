@@ -38,7 +38,7 @@ public class UpdateVersionService {
     }
 
     public UpdateInfo getUpDateInfo() throws Exception {
-        String path = Constant.URL_UPDATE_XIETIAN + "/update.txt";
+        String path = Constant.URL_UPDATE + "/update.txt";
         StringBuffer sb = new StringBuffer();
         String line = null;
         BufferedReader reader = null;
